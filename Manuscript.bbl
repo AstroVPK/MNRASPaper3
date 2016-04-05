@@ -1,0 +1,751 @@
+ \newcommand{\noop}[1]{}
+\begin{thebibliography}{}
+\makeatletter
+\relax
+\def\mn@urlcharsother{\let\do\@makeother \do\$\do\&\do\#\do\^\do\_\do\%\do\~}
+\def\mn@doi{\begingroup\mn@urlcharsother \@ifnextchar [ {\mn@doi@}
+  {\mn@doi@[]}}
+\def\mn@doi@[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href
+  {http://dx.doi.org/#2} {doi:#2}\else \href {http://dx.doi.org/#2} {#1}\fi
+  \endgroup}
+\def\mn@eprint#1#2{\mn@eprint@#1:#2::\@nil}
+\def\mn@eprint@arXiv#1{\href {http://arxiv.org/abs/#1} {{\tt arXiv:#1}}}
+\def\mn@eprint@dblp#1{\href {http://dblp.uni-trier.de/rec/bibtex/#1.xml}
+  {dblp:#1}}
+\def\mn@eprint@#1:#2:#3:#4\@nil{\def\@tempa {#1}\def\@tempb {#2}\def\@tempc
+  {#3}\ifx \@tempc \@empty \let \@tempc \@tempb \let \@tempb \@tempa \fi \ifx
+  \@tempb \@empty \def\@tempb {arXiv}\fi \@ifundefined
+  {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
+  mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
+
+\bibitem[\protect\citeauthoryear{{Abramowicz}, {Czerny}, {Lasota}  \&
+  {Szuszkiewicz}}{{Abramowicz} et~al.}{1988}]{Abramowicz88}
+{Abramowicz} M.~A.,  {Czerny} B.,  {Lasota} J.~P.,   {Szuszkiewicz} E.,  1988,
+  \mn@doi [\apj] {10.1086/166683}, \href
+  {http://adsabs.harvard.edu/abs/1988ApJ...332..646A} {332, 646}
+
+\bibitem[\protect\citeauthoryear{{Abramowicz}, {Chen}, {Kato}, {Lasota}  \&
+  {Regev}}{{Abramowicz} et~al.}{1995}]{AbramowiczChen95}
+{Abramowicz} M.~A.,  {Chen} X.,  {Kato} S.,  {Lasota} J.-P.,   {Regev} O.,
+  1995, \mn@doi [\apjl] {10.1086/187709}, \href
+  {http://adsabs.harvard.edu/abs/1995ApJ...438L..37A} {438, L37}
+
+\bibitem[\protect\citeauthoryear{{Ar{\'e}valo}}{{Ar{\'e}valo}}{2009}]{Arevalo09}
+{Ar{\'e}valo} P.,  2009, in {Wang} W.,  {Yang} Z.,  {Luo} Z.,   {Chen} Z.,
+  eds,  Astronomical Society of the Pacific Conference Series Vol. 408, The
+  Starburst-AGN Connection. p.~296
+
+\bibitem[\protect\citeauthoryear{{Ar{\'e}valo}, {Papadakis}, {Uttley},
+  {McHardy}  \& {Brinkmann}}{{Ar{\'e}valo} et~al.}{2006}]{Arevalo06}
+{Ar{\'e}valo} P.,  {Papadakis} I.~E.,  {Uttley} P.,  {McHardy} I.~M.,
+  {Brinkmann} W.,  2006, \mn@doi [\mnras] {10.1111/j.1365-2966.2006.10871.x},
+  \href {http://adsabs.harvard.edu/abs/2006MNRAS.372..401A} {372, 401}
+
+\bibitem[\protect\citeauthoryear{{Balbus} \& {Hawley}}{{Balbus} \&
+  {Hawley}}{1991}]{BHI}
+{Balbus} S.~A.,  {Hawley} J.~F.,  1991, \mn@doi [\apj] {10.1086/170270}, \href
+  {http://adsabs.harvard.edu/abs/1991ApJ...376..214B} {376, 214}
+
+\bibitem[\protect\citeauthoryear{{Balbus} \& {Hawley}}{{Balbus} \&
+  {Hawley}}{1992}]{BHIV}
+{Balbus} S.~A.,  {Hawley} J.~F.,  1992, \mn@doi [\apj] {10.1086/172022}, \href
+  {http://adsabs.harvard.edu/abs/1992ApJ...400..610B} {400, 610}
+
+\bibitem[\protect\citeauthoryear{{Balbus} \& {Hawley}}{{Balbus} \&
+  {Hawley}}{1997}]{BHRev}
+{Balbus} S.~A.,  {Hawley} J.~F.,  1997, in {Wickramasinghe} D.~T.,  {Bicknell}
+  G.~V.,   {Ferrario} L.,  eds,  Astronomical Society of the Pacific Conference
+  Series Vol. 121, IAU Colloq. 163: Accretion Phenomena and Related Outflows.
+  p.~90
+
+\bibitem[\protect\citeauthoryear{{Balbus} \& {Papaloizou}}{{Balbus} \&
+  {Papaloizou}}{1999}]{BalbusPapaloizou99}
+{Balbus} S.~A.,  {Papaloizou} J.~C.~B.,  1999, \mn@doi [\apj] {10.1086/307594},
+  \href {http://adsabs.harvard.edu/abs/1999ApJ...521..650B} {521, 650}
+
+\bibitem[\protect\citeauthoryear{{Barth} et~al.,}{{Barth}
+  et~al.}{2011}]{Barth11}
+{Barth} A.~J.,  et~al., 2011, \mn@doi [\apj] {10.1088/0004-637X/732/2/121},
+  \href {http://adsabs.harvard.edu/abs/2011ApJ...732..121B} {732, 121}
+
+\bibitem[\protect\citeauthoryear{{Blaes}}{{Blaes}}{2014}]{BlaesAccretion}
+{Blaes} O.,  2014, in {Maurizio} F.,  {Belloni} T.,  {Casella} P.,  {Gilfanov}
+  M.,  {Jonker} P.,   {King} A.,  eds, Space Sciences Series of ISSI, Vol.~49,
+  The Physics of Accretion onto Black Holes.
+Springer, Chapt.~2, pp 21--42
+
+\bibitem[\protect\citeauthoryear{{Blandford} \& {Payne}}{{Blandford} \&
+  {Payne}}{1982}]{BlandfordPayne82}
+{Blandford} R.~D.,  {Payne} D.~G.,  1982, \mnras, \href
+  {http://adsabs.harvard.edu/abs/1982MNRAS.199..883B} {199, 883}
+
+\bibitem[\protect\citeauthoryear{{Borucki} et~al.,}{{Borucki}
+  et~al.}{2010}]{Borucki10}
+{Borucki} W.~J.,  et~al., 2010, \mn@doi [Science] {10.1126/science.1185402},
+  \href {http://adsabs.harvard.edu/abs/2010Sci...327..977B} {327, 977}
+
+\bibitem[\protect\citeauthoryear{{Brockwell}}{{Brockwell}}{1994}]{DimensionEstimationBrockwell}
+{Brockwell} Peter J.,  1994, in {Tong} H.,  ed., Nonlinear Time Series and
+  Chaos, Vol.~1, Dimension Estimation and Models.
+World Scientific Pub. Co. Inc., Chapt.~4, pp 170--190
+
+\bibitem[\protect\citeauthoryear{{Brockwell}}{{Brockwell}}{2001}]{HandbookOfStatistics19Brockwell}
+{Brockwell} Peter J.,  2001, in {Shanbhag} D.~N.,  {Rao} C.~R.,  eds, Handbook
+  of Statistics, Vol.~19, Stochastic Processes.
+North-Holland, Chapt.~9, pp 249--276
+
+\bibitem[\protect\citeauthoryear{{Brockwell}}{{Brockwell}}{2014}]{Brockwell14}
+{Brockwell} P.,  2014, \mn@doi [Ann. Inst. Stat. Math.]
+  {10.1007/s10463-014-0468-7}, 66, 647
+
+\bibitem[\protect\citeauthoryear{{Brockwell} \& {Davis}}{{Brockwell} \&
+  {Davis}}{2009}]{BrockwellDavisTSTM}
+{Brockwell} Peter J.,  {Davis} Richard A.,  2009, Time Series: Theory and
+  Methods, 2 edn.
+Springer Texts in Statistics, Springer
+
+\bibitem[\protect\citeauthoryear{{Brockwell} \& {Davis}}{{Brockwell} \&
+  {Davis}}{2010}]{BrockwellDavisITSF}
+{Brockwell} Peter J.,  {Davis} Richard A.,  2010, Introduction to Time Series
+  and Forecasting, 2 edn.
+Springer Texts in Statistics, Springer
+
+\bibitem[\protect\citeauthoryear{{Burnham} \& {Anderson}}{{Burnham} \&
+  {Anderson}}{2003}]{ModelSelection}
+{Burnham} K.~P.,  {Anderson} D.~R.,  2003, Model Selection and Multimodel
+  Inference: A Practical Information-Theoretic Approach, 3 edn.
+Springer
+
+\bibitem[\protect\citeauthoryear{{Carini} \& {Ryle}}{{Carini} \&
+  {Ryle}}{2012}]{Carini12}
+{Carini} M.~T.,  {Ryle} W.~T.,  2012, \mn@doi [\apj]
+  {10.1088/0004-637X/749/1/70}, \href
+  {http://adsabs.harvard.edu/abs/2012ApJ...749...70C} {749, 70}
+
+\bibitem[\protect\citeauthoryear{{Chen}, {Abramowicz}, {Lasota}, {Narayan}  \&
+  {Yi}}{{Chen} et~al.}{1995}]{ChenAbramowicz95}
+{Chen} X.,  {Abramowicz} M.~A.,  {Lasota} J.-P.,  {Narayan} R.,   {Yi} I.,
+  1995, \mn@doi [\apjl] {10.1086/187836}, \href
+  {http://adsabs.harvard.edu/abs/1995ApJ...443L..61C} {443, L61}
+
+\bibitem[\protect\citeauthoryear{{Christiansen} et~al.,}{{Christiansen}
+  et~al.}{2013}]{KDCH}
+{Christiansen} J.~L.,  et~al., 2013, Technical Report KSCI-19040-004, Kepler
+  Data Characteristics Handbook.
+National Aeronautics and Space Administration, NASA Ames Research Center,
+  Moffett Field, California
+
+\bibitem[\protect\citeauthoryear{{Clarke}, {Kolodziejczak}  \&
+  {Caldwell}}{{Clarke} et~al.}{2014}]{Clarke14}
+{Clarke} B.,  {Kolodziejczak} J.~J.,   {Caldwell} D.~A.,  2014, in American
+  Astronomical Society Meeting Abstracts \#224. p. 120.07
+
+\bibitem[\protect\citeauthoryear{{Coriat}, {Fender}  \& {Dubus}}{{Coriat}
+  et~al.}{2012}]{Coriat12}
+{Coriat} M.,  {Fender} R.~P.,   {Dubus} G.,  2012, \mn@doi [\mnras]
+  {10.1111/j.1365-2966.2012.21339.x}, \href
+  {http://adsabs.harvard.edu/abs/2012MNRAS.424.1991C} {424, 1991}
+
+\bibitem[\protect\citeauthoryear{{Davis}}{{Davis}}{2002}]{Davis}
+{Davis} J.~H.,  2002, Foundations of Deterministic and Stochastic Control.
+Birkh\"{a}user
+
+\bibitem[\protect\citeauthoryear{{Denham}}{{Denham}}{1974}]{Denham74}
+{Denham} M.~J.,  1974, \mn@doi [IEEE Transactions on Automatic Control]
+  {10.1109/TAC.1974.1100708}, 19, 646
+
+\bibitem[\protect\citeauthoryear{{Dexter}, {Agol}  \& {Fragile}}{{Dexter}
+  et~al.}{2009}]{Dexter09}
+{Dexter} J.,  {Agol} E.,   {Fragile} P.~C.,  2009, \mn@doi [\apjl]
+  {10.1088/0004-637X/703/2/L142}, \href
+  {http://adsabs.harvard.edu/abs/2009ApJ...703L.142D} {703, L142}
+
+\bibitem[\protect\citeauthoryear{{Dexter}, {Agol}, {Fragile}  \&
+  {McKinney}}{{Dexter} et~al.}{2010}]{Dexter10}
+{Dexter} J.,  {Agol} E.,  {Fragile} P.~C.,   {McKinney} J.~C.,  2010, \mn@doi
+  [\apj] {10.1088/0004-637X/717/2/1092}, \href
+  {http://adsabs.harvard.edu/abs/2010ApJ...717.1092D} {717, 1092}
+
+\bibitem[\protect\citeauthoryear{{Dickinson}, {Kailath}  \& {Morf}}{{Dickinson}
+  et~al.}{1974}]{Kailath74}
+{Dickinson} B.~W.,  {Kailath} T.,   {Morf} M.,  1974, \mn@doi [IEEE
+  Transactions on Automatic Control] {10.1109/TAC.1974.1100699}, 19, 656
+
+\bibitem[\protect\citeauthoryear{{Done}}{{Done}}{2014}]{DoneAccretion}
+{Done} C.,  2014, in {Mart\'{i}nez-Pa\'{i}a} I.~G.,  {Shahbaz} T.,
+  {Vel\'{a}quez} J.~C.,  eds, Canary Islands Winter School of Astrophysics,
+  Accretion Processes in Astrophysics.
+Cambridge University Press, Chapt.~6, pp 184--226
+
+\bibitem[\protect\citeauthoryear{{Doob}}{{Doob}}{1990}]{Doob}
+{Doob} Joseph L.,  1990, Stochastic Processes.
+Wiley-Interscience
+
+\bibitem[\protect\citeauthoryear{{Durbin} \& {Koopman}}{{Durbin} \&
+  {Koopman}}{2012}]{DurbinKoopman}
+{Durbin} J.,  {Koopman} S.~J.,  2012, Time Series Analysis by State Space
+  Methods, 2 edn.
+ Oxford Statistical Science Vol. 38, Oxford University Press
+
+\bibitem[\protect\citeauthoryear{{Edelson} et~al.,}{{Edelson}
+  et~al.}{1996}]{Edelson96}
+{Edelson} R.~A.,  et~al., 1996, \mn@doi [\apj] {10.1086/177872}, \href
+  {http://adsabs.harvard.edu/abs/1996ApJ...470..364E} {470, 364}
+
+\bibitem[\protect\citeauthoryear{{Edelson}, {Mushotzky}, {Vaughan}, {Scargle},
+  {Gandhi}, {Malkan}  \& {Baumgartner}}{{Edelson} et~al.}{2013}]{Edelson13}
+{Edelson} R.,  {Mushotzky} R.,  {Vaughan} S.,  {Scargle} J.,  {Gandhi} P.,
+  {Malkan} M.,   {Baumgartner} W.,  2013, \mn@doi [\apj]
+  {10.1088/0004-637X/766/1/16}, \href
+  {http://adsabs.harvard.edu/abs/2013ApJ...766...16E} {766, 16}
+
+\bibitem[\protect\citeauthoryear{{Edelson}, {Vaughan}, {Malkan}, {Kelly},
+  {Smith}, {Boyd}  \& {Mushotzky}}{{Edelson} et~al.}{2014}]{Edelson14}
+{Edelson} R.,  {Vaughan} S.,  {Malkan} M.,  {Kelly} B.~C.,  {Smith} K.~L.,
+  {Boyd} P.~T.,   {Mushotzky} R.,  2014, \mn@doi [\apj]
+  {10.1088/0004-637X/795/1/2}, \href
+  {http://adsabs.harvard.edu/abs/2014ApJ...795....2E} {795, 2}
+
+\bibitem[\protect\citeauthoryear{{Emmanoulopoulos}, {McHardy}  \&
+  {Uttley}}{{Emmanoulopoulos} et~al.}{2010}]{Emm10}
+{Emmanoulopoulos} D.,  {McHardy} I.~M.,   {Uttley} P.,  2010, \mn@doi [\mnras]
+  {10.1111/j.1365-2966.2010.16328.x}, \href
+  {http://adsabs.harvard.edu/abs/2010MNRAS.404..931E} {404, 931}
+
+\bibitem[\protect\citeauthoryear{{Fragile}}{{Fragile}}{2014}]{FragileAccretion}
+{Fragile} P.~C.,  2014, in {Maurizio} F.,  {Belloni} T.,  {Casella} P.,
+  {Gilfanov} M.,  {Jonker} P.,   {King} A.,  eds, Space Sciences Series of
+  ISSI, Vol.~49, The Physics of Accretion onto Black Holes.
+Springer, Chapt.~5, pp 87--100
+
+\bibitem[\protect\citeauthoryear{{Fragile} \& {Blaes}}{{Fragile} \&
+  {Blaes}}{2008}]{FragileBlaes08}
+{Fragile} P.~C.,  {Blaes} O.~M.,  2008, \mn@doi [\apj] {10.1086/591936}, \href
+  {http://adsabs.harvard.edu/abs/2008ApJ...687..757F} {687, 757}
+
+\bibitem[\protect\citeauthoryear{{Fragile}, {Blaes}, {Anninos}  \&
+  {Salmonson}}{{Fragile} et~al.}{2007}]{FragileBlaes07}
+{Fragile} P.~C.,  {Blaes} O.~M.,  {Anninos} P.,   {Salmonson} J.~D.,  2007,
+  \mn@doi [\apj] {10.1086/521092}, \href
+  {http://adsabs.harvard.edu/abs/2007ApJ...668..417F} {668, 417}
+
+\bibitem[\protect\citeauthoryear{{Frank}, {King}  \& {Raine}}{{Frank}
+  et~al.}{2002}]{FKR}
+{Frank} J.,  {King} A.,   {Raine} D.,  2002, Accretion Power in Astrophysics, 3
+  edn.
+Cambridge University Press
+
+\bibitem[\protect\citeauthoryear{{Friedland}}{{Friedland}}{2005}]{Friedland}
+{Friedland} B.,  2005, Control System Design: An Introduction to State-Space
+  Methods.
+Dover Books on Electrical Engineering, Dover Publications
+
+\bibitem[\protect\citeauthoryear{{Froning} et~al.,}{{Froning}
+  et~al.}{2011}]{Froning11}
+{Froning} C.~S.,  et~al., 2011, \mn@doi [\apj] {10.1088/0004-637X/743/1/26},
+  \href {http://adsabs.harvard.edu/abs/2011ApJ...743...26F} {743, 26}
+
+\bibitem[\protect\citeauthoryear{{Gaskell}}{{Gaskell}}{2008}]{Gaskell08}
+{Gaskell} C.~M.,  2008, in Revista Mexicana de Astronomia y Astrofisica
+  Conference Series. pp 1--11 (\mn@eprint {arXiv} {0711.2113})
+
+\bibitem[\protect\citeauthoryear{{Gaskell} \& {Peterson}}{{Gaskell} \&
+  {Peterson}}{1987}]{GaskellPeterson87}
+{Gaskell} C.~M.,  {Peterson} B.~M.,  1987, \mn@doi [\apjs] {10.1086/191216},
+  \href {http://adsabs.harvard.edu/abs/1987ApJS...65....1G} {65, 1}
+
+\bibitem[\protect\citeauthoryear{{Gelderman}, {Guinan}, {Howell}, {Mattox},
+  {McGruder}, {Walter}, {Davis}  \& {Everett}}{{Gelderman} et~al.}{2003}]{RCT}
+{Gelderman} R.,  {Guinan} E.,  {Howell} S.,  {Mattox} J.~R.,  {McGruder} C.~H.,
+   {Walter} D.~K.,  {Davis} D.~R.,   {Everett} M.,  2003, in American
+  Astronomical Society Meeting Abstracts \#202. p.~766
+
+\bibitem[\protect\citeauthoryear{{Gierli{\'n}ski}, {Middleton}, {Ward}  \&
+  {Done}}{{Gierli{\'n}ski} et~al.}{2008}]{GierlinskiQPO}
+{Gierli{\'n}ski} M.,  {Middleton} M.,  {Ward} M.,   {Done} C.,  2008, \mn@doi
+  [\nat] {10.1038/nature07277}, \href
+  {http://adsabs.harvard.edu/abs/2008Natur.455..369G} {455, 369}
+
+\bibitem[\protect\citeauthoryear{{Gillespie}}{{Gillespie}}{1996}]{Gillespie96}
+{Gillespie} D.~T.,  1996, \mn@doi [American Journal of Physics]
+  {10.1119/1.18210}, \href {http://adsabs.harvard.edu/abs/1996AmJPh..64..225G}
+  {64, 225}
+
+\bibitem[\protect\citeauthoryear{{Gilliland}}{{Gilliland}}{2004}]{Gilliland04}
+{Gilliland} R.~L.,  2004, Technical report, {ACS CCD Gains, Full Well Depths,
+  and Linearity up to and Beyond Saturation}.
+Space Telescope Science Institute
+
+\bibitem[\protect\citeauthoryear{{Grewal} \& {Andrews}}{{Grewal} \&
+  {Andrews}}{2010}]{GrewalAndrews10}
+{Grewal} M.~S.,  {Andrews} A.~P.,  2010, \mn@doi [IEEE Control Systems
+  Magazine] {10.1109/MCS.2010.936465}, 30, 69
+
+\bibitem[\protect\citeauthoryear{{Grindlay}, {Miller}, {Siemiginowska}, {Los},
+  {Kelly}  \& {Tang}}{{Grindlay} et~al.}{2014}]{GrindleyQPO}
+{Grindlay} J.~E.,  {Miller} G.~F.,  {Siemiginowska} A.,  {Los} E.,  {Kelly}
+  B.~C.,   {Tang} S.,  2014, in American Astronomical Society Meeting Abstracts
+  \#224. p. 410.05
+
+\bibitem[\protect\citeauthoryear{{Hameury}, {Viallet}  \& {Lasota}}{{Hameury}
+  et~al.}{2009}]{Hameury09}
+{Hameury} J.-M.,  {Viallet} M.,   {Lasota} J.-P.,  2009, \mn@doi [\aap]
+  {10.1051/0004-6361/200810928}, \href
+  {http://adsabs.harvard.edu/abs/2009A%26A...496..413H} {496, 413}
+
+\bibitem[\protect\citeauthoryear{{Hamilton}}{{Hamilton}}{1994}]{Hamilton}
+{Hamilton} J.~D.,  1994, Time Series Analysis.
+Princeton University Press
+
+\bibitem[\protect\citeauthoryear{{Hanif} \& {Protopapas}}{{Hanif} \&
+  {Protopapas}}{2015}]{Hanif15}
+{Hanif} A.,  {Protopapas} P.,  2015, \mn@doi [\mnras] {10.1093/mnras/stv004},
+  \href {http://adsabs.harvard.edu/abs/2015MNRAS.448..390H} {448, 390}
+
+\bibitem[\protect\citeauthoryear{{Harvey}}{{Harvey}}{1991}]{Harvey}
+{Harvey} A.~C.,  1991, Forecasting, Structural Time Series Models and the
+  Kalman Filter.
+Cambridge University Press
+
+\bibitem[\protect\citeauthoryear{{Hawley} \& {Balbus}}{{Hawley} \&
+  {Balbus}}{1991}]{BHII}
+{Hawley} J.~F.,  {Balbus} S.~A.,  1991, \mn@doi [\apj] {10.1086/170271}, \href
+  {http://adsabs.harvard.edu/abs/1991ApJ...376..223H} {376, 223}
+
+\bibitem[\protect\citeauthoryear{{Hawley} \& {Balbus}}{{Hawley} \&
+  {Balbus}}{1992}]{BHIII}
+{Hawley} J.~F.,  {Balbus} S.~A.,  1992, \mn@doi [\apj] {10.1086/172021}, \href
+  {http://adsabs.harvard.edu/abs/1992ApJ...400..595H} {400, 595}
+
+\bibitem[\protect\citeauthoryear{{Hawley}, {Gammie}  \& {Balbus}}{{Hawley}
+  et~al.}{1995}]{BHG95}
+{Hawley} J.~F.,  {Gammie} C.~F.,   {Balbus} S.~A.,  1995, \mn@doi [\apj]
+  {10.1086/175311}, \href {http://adsabs.harvard.edu/abs/1995ApJ...440..742H}
+  {440, 742}
+
+\bibitem[\protect\citeauthoryear{{Henisey}, {Blaes}  \& {Fragile}}{{Henisey}
+  et~al.}{2012}]{Henisey12}
+{Henisey} K.~B.,  {Blaes} O.~M.,   {Fragile} P.~C.,  2012, \mn@doi [\apj]
+  {10.1088/0004-637X/761/1/18}, \href
+  {http://adsabs.harvard.edu/abs/2012ApJ...761...18H} {761, 18}
+
+\bibitem[\protect\citeauthoryear{{Jacobs}}{{Jacobs}}{2010}]{Jacobs}
+{Jacobs} K.,  2010, Stochastic Processes for Physicists: Understanding Noisy
+  Systems.
+Cambridge University Press
+
+\bibitem[\protect\citeauthoryear{{Janiuk} \& {Czerny}}{{Janiuk} \&
+  {Czerny}}{2007}]{JaniukCzerny07}
+{Janiuk} A.,  {Czerny} B.,  2007, \mn@doi [\aap] {10.1051/0004-6361:20066133},
+  \href {http://adsabs.harvard.edu/abs/2007A%26A...466..793J} {466, 793}
+
+\bibitem[\protect\citeauthoryear{Jones}{Jones}{1980}]{Jones80}
+Jones R.~H.,  1980, \mn@doi [Technometrics] {10.1080/00401706.1980.10486171},
+  22, 389
+
+\bibitem[\protect\citeauthoryear{{Jones}}{{Jones}}{1993}]{Jones}
+{Jones} R.~H.,  1993, Longitudinal Data with Serial Correlation: A State-Space
+  Approach.
+ Monographs on Statistics and Applied Probability Vol. 47, Chapman \& Hall
+
+\bibitem[\protect\citeauthoryear{Jones \& Ackerson}{Jones \&
+  Ackerson}{1990}]{JonesAckerson90}
+Jones R.~H.,  Ackerson L.~M.,  1990, \mn@doi [Biometrika]
+  {10.1093/biomet/77.4.721}, 77, 721
+
+\bibitem[\protect\citeauthoryear{Kalman}{Kalman}{1960}]{Kalman60}
+Kalman R.~E.,  1960, Transactions of the ASME--Journal of Basic Engineering,
+  82, 35
+
+\bibitem[\protect\citeauthoryear{{Kasliwal}, {Vogeley}  \&
+  {Richards}}{{Kasliwal} et~al.}{2015a}]{Kasliwal15}
+{Kasliwal} V.~P.,  {Vogeley} M.~S.,   {Richards} G.~T.,  2015a, \mn@doi
+  [\mnras] {10.1093/mnras/stv1230}, \href
+  {http://adsabs.harvard.edu/abs/2015MNRAS.451.4328K} {451, 4328}
+
+\bibitem[\protect\citeauthoryear{{Kasliwal}, {Vogeley}, {Richards}, {Williams}
+  \& {Carini}}{{Kasliwal} et~al.}{2015b}]{Kasliwal15b}
+{Kasliwal} V.~P.,  {Vogeley} M.~S.,  {Richards} G.~T.,  {Williams} J.,
+  {Carini} M.~T.,  2015b, \mn@doi [\mnras] {10.1093/mnras/stv1797}, \href
+  {http://adsabs.harvard.edu/abs/2015MNRAS.453.2075K} {453, 2075}
+
+\bibitem[\protect\citeauthoryear{{Kelly}, {Bechtold}  \&
+  {Siemiginowska}}{{Kelly} et~al.}{2009}]{Kelly09}
+{Kelly} B.~C.,  {Bechtold} J.,   {Siemiginowska} A.,  2009, \mn@doi [\apj]
+  {10.1088/0004-637X/698/1/895}, \href
+  {http://adsabs.harvard.edu/abs/2009ApJ...698..895K} {698, 895}
+
+\bibitem[\protect\citeauthoryear{{Kelly}, {Sobolewska}  \&
+  {Siemiginowska}}{{Kelly} et~al.}{2011}]{Kelly11}
+{Kelly} B.~C.,  {Sobolewska} M.,   {Siemiginowska} A.,  2011, \mn@doi [\apj]
+  {10.1088/0004-637X/730/1/52}, \href
+  {http://adsabs.harvard.edu/abs/2011ApJ...730...52K} {730, 52}
+
+\bibitem[\protect\citeauthoryear{{Kelly}, {Becker}, {Sobolewska},
+  {Siemiginowska}  \& {Uttley}}{{Kelly} et~al.}{2014}]{Kelly14}
+{Kelly} B.~C.,  {Becker} A.~C.,  {Sobolewska} M.,  {Siemiginowska} A.,
+  {Uttley} P.,  2014, \mn@doi [\apj] {10.1088/0004-637X/788/1/33}, \href
+  {http://adsabs.harvard.edu/abs/2014ApJ...788...33K} {788, 33}
+
+\bibitem[\protect\citeauthoryear{{Kinemuchi}, {Barclay}, {Fanelli}, {Pepper},
+  {Still}  \& {Howell}}{{Kinemuchi} et~al.}{2012}]{Kinemuchi12}
+{Kinemuchi} K.,  {Barclay} T.,  {Fanelli} M.,  {Pepper} J.,  {Still} M.,
+  {Howell} S.~B.,  2012, \mn@doi [\pasp] {10.1086/667603}, \href
+  {http://adsabs.harvard.edu/abs/2012PASP..124..963K} {124, 963}
+
+\bibitem[\protect\citeauthoryear{{King}, {Pringle}, {West}  \& {Livio}}{{King}
+  et~al.}{2004}]{King04}
+{King} A.~R.,  {Pringle} J.~E.,  {West} R.~G.,   {Livio} M.,  2004, \mn@doi
+  [\mnras] {10.1111/j.1365-2966.2004.07322.x}, \href
+  {http://adsabs.harvard.edu/abs/2004MNRAS.348..111K} {348, 111}
+
+\bibitem[\protect\citeauthoryear{{King}, {Pringle}  \& {Livio}}{{King}
+  et~al.}{2007}]{King07}
+{King} A.~R.,  {Pringle} J.~E.,   {Livio} M.,  2007, \mn@doi [\mnras]
+  {10.1111/j.1365-2966.2007.11556.x}, \href
+  {http://adsabs.harvard.edu/abs/2007MNRAS.376.1740K} {376, 1740}
+
+\bibitem[\protect\citeauthoryear{{Kolodziejczak}, {Caldwell}, {Van Cleve},
+  {Clarke}, {Jenkins}, {Cote}, {Klaus}  \& {Argabright}}{{Kolodziejczak}
+  et~al.}{2010}]{Kol10}
+{Kolodziejczak} J.~J.,  {Caldwell} D.~A.,  {Van Cleve} J.~E.,  {Clarke} B.~D.,
+  {Jenkins} J.~M.,  {Cote} M.~T.,  {Klaus} T.~C.,   {Argabright} V.~S.,  2010,
+  in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference
+  Series. p.~1, \mn@doi{10.1117/12.857637}
+
+\bibitem[\protect\citeauthoryear{{Koratkar} \& {Blaes}}{{Koratkar} \&
+  {Blaes}}{1999}]{KoratkarBlaes99}
+{Koratkar} A.,  {Blaes} O.,  1999, \mn@doi [\pasp] {10.1086/316294}, \href
+  {http://adsabs.harvard.edu/abs/1999PASP..111....1K} {111, 1}
+
+\bibitem[\protect\citeauthoryear{{Koratkar} \& {Gaskell}}{{Koratkar} \&
+  {Gaskell}}{1991}]{KoratkarGaskell91}
+{Koratkar} A.~P.,  {Gaskell} C.~M.,  1991, \mn@doi [\apjs] {10.1086/191547},
+  \href {http://adsabs.harvard.edu/abs/1991ApJS...75..719K} {75, 719}
+
+\bibitem[\protect\citeauthoryear{{Koz{\l}owski} et~al.,}{{Koz{\l}owski}
+  et~al.}{2010}]{Kozlowski10}
+{Koz{\l}owski} S.,  et~al., 2010, \mn@doi [\apj] {10.1088/0004-637X/708/2/927},
+  \href {http://adsabs.harvard.edu/abs/2010ApJ...708..927K} {708, 927}
+
+\bibitem[\protect\citeauthoryear{{Krolik}, {Horne}, {Kallman}, {Malkan},
+  {Edelson}  \& {Kriss}}{{Krolik} et~al.}{1991}]{Krolik91}
+{Krolik} J.~H.,  {Horne} K.,  {Kallman} T.~R.,  {Malkan} M.~A.,  {Edelson}
+  R.~A.,   {Kriss} G.~A.,  1991, \mn@doi [\apj] {10.1086/169918}, \href
+  {http://adsabs.harvard.edu/abs/1991ApJ...371..541K} {371, 541}
+
+\bibitem[\protect\citeauthoryear{{Lasota}}{{Lasota}}{2001}]{Lasota01}
+{Lasota} J.-P.,  2001, \mn@doi [New Astronomy Reviews]
+  {10.1016/S1387-6473(01)00112-9}, \href
+  {http://adsabs.harvard.edu/abs/2001NewAR..45..449L} {45, 449}
+
+\bibitem[\protect\citeauthoryear{{Livio}, {Pringle}  \& {King}}{{Livio}
+  et~al.}{2003}]{LivioPringleKing03}
+{Livio} M.,  {Pringle} J.~E.,   {King} A.~R.,  2003, \mn@doi [\apj]
+  {10.1086/375872}, \href {http://adsabs.harvard.edu/abs/2003ApJ...593..184L}
+  {593, 184}
+
+\bibitem[\protect\citeauthoryear{{Lyubarskii}}{{Lyubarskii}}{1997}]{Lyubarskii97}
+{Lyubarskii} Y.~E.,  1997, \mnras, \href
+  {http://adsabs.harvard.edu/abs/1997MNRAS.292..679L} {292, 679}
+
+\bibitem[\protect\citeauthoryear{{Maccarone}}{{Maccarone}}{2014}]{MaccaroneAccretion}
+{Maccarone} T.~J.,  2014, in {Maurizio} F.,  {Belloni} T.,  {Casella} P.,
+  {Gilfanov} M.,  {Jonker} P.,   {King} A.,  eds, Space Sciences Series of
+  ISSI, Vol.~49, The Physics of Accretion onto Black Holes.
+Springer, Chapt.~6, pp 101--120
+
+\bibitem[\protect\citeauthoryear{{Mayer} \& {Pringle}}{{Mayer} \&
+  {Pringle}}{2006}]{MayerPringle06}
+{Mayer} M.,  {Pringle} J.~E.,  2006, \mn@doi [\mnras]
+  {10.1111/j.1365-2966.2006.10111.x}, \href
+  {http://adsabs.harvard.edu/abs/2006MNRAS.368..379M} {368, 379}
+
+\bibitem[\protect\citeauthoryear{{McClintock}, {Horne}  \&
+  {Remillard}}{{McClintock} et~al.}{1995}]{McClintock95}
+{McClintock} J.~E.,  {Horne} K.,   {Remillard} R.~A.,  1995, \mn@doi [\apj]
+  {10.1086/175445}, \href {http://adsabs.harvard.edu/abs/1995ApJ...442..358M}
+  {442, 358}
+
+\bibitem[\protect\citeauthoryear{{McHardy}, {Papadakis}, {Uttley}, {Page}  \&
+  {Mason}}{{McHardy} et~al.}{2004}]{McHardy04b}
+{McHardy} I.~M.,  {Papadakis} I.~E.,  {Uttley} P.,  {Page} M.~J.,   {Mason}
+  K.~O.,  2004, \mn@doi [\mnras] {10.1111/j.1365-2966.2004.07376.x}, \href
+  {http://adsabs.harvard.edu/abs/2004MNRAS.348..783M} {348, 783}
+
+\bibitem[\protect\citeauthoryear{{Mellen}}{{Mellen}}{1952}]{Mellen52}
+{Mellen} R.~H.,  1952, \mn@doi [J. Acoust. Soc. Am.] {10.1121/1.1906924}, 24,
+  478
+
+\bibitem[\protect\citeauthoryear{{Miesch} et~al.,}{{Miesch}
+  et~al.}{2015}]{EddySim15}
+{Miesch} M.~S.,  et~al., 2015, preprint, \href
+  {http://adsabs.harvard.edu/abs/2015arXiv150501808M} {} (\mn@eprint {arXiv}
+  {1505.01808})
+
+\bibitem[\protect\citeauthoryear{{Misra} \& {Zdziarski}}{{Misra} \&
+  {Zdziarski}}{2008}]{Misra08}
+{Misra} R.,  {Zdziarski} A.~A.,  2008, \mn@doi [\mnras]
+  {10.1111/j.1365-2966.2008.13363.x}, \href
+  {http://adsabs.harvard.edu/abs/2008MNRAS.387..915M} {387, 915}
+
+\bibitem[\protect\citeauthoryear{{Miyamoto}, {Kitamoto}, {Mitsuda}  \&
+  {Dotani}}{{Miyamoto} et~al.}{1988}]{Miyamoto88}
+{Miyamoto} S.,  {Kitamoto} S.,  {Mitsuda} K.,   {Dotani} T.,  1988, \mn@doi
+  [\nat] {10.1038/336450a0}, \href
+  {http://adsabs.harvard.edu/abs/1988Natur.336..450M} {336, 450}
+
+\bibitem[\protect\citeauthoryear{{Mo{\'s}cibrodzka}, {Gammie}, {Dolence},
+  {Shiokawa}  \& {Leung}}{{Mo{\'s}cibrodzka} et~al.}{2009}]{Moscibrodzka09}
+{Mo{\'s}cibrodzka} M.,  {Gammie} C.~F.,  {Dolence} J.~C.,  {Shiokawa} H.,
+  {Leung} P.~K.,  2009, \mn@doi [\apj] {10.1088/0004-637X/706/1/497}, \href
+  {http://adsabs.harvard.edu/abs/2009ApJ...706..497M} {706, 497}
+
+\bibitem[\protect\citeauthoryear{{Mushotzky}, {Edelson}, {Baumgartner}  \&
+  {Gandhi}}{{Mushotzky} et~al.}{2011}]{Mushotzky11}
+{Mushotzky} R.~F.,  {Edelson} R.,  {Baumgartner} W.,   {Gandhi} P.,  2011,
+  \mn@doi [\apjl] {10.1088/2041-8205/743/1/L12}, \href
+  {http://adsabs.harvard.edu/abs/2011ApJ...743L..12M} {743, L12}
+
+\bibitem[\protect\citeauthoryear{{Narayan} \& {Yi}}{{Narayan} \&
+  {Yi}}{1994}]{NarayanYi94}
+{Narayan} R.,  {Yi} I.,  1994, \mn@doi [\apjl] {10.1086/187381}, \href
+  {http://adsabs.harvard.edu/abs/1994ApJ...428L..13N} {428, L13}
+
+\bibitem[\protect\citeauthoryear{{Narayan} \& {Yi}}{{Narayan} \&
+  {Yi}}{1995a}]{NarayanYi95a}
+{Narayan} R.,  {Yi} I.,  1995a, \mn@doi [\apj] {10.1086/175599}, \href
+  {http://adsabs.harvard.edu/abs/1995ApJ...444..231N} {444, 231}
+
+\bibitem[\protect\citeauthoryear{{Narayan} \& {Yi}}{{Narayan} \&
+  {Yi}}{1995b}]{NarayanYi95b}
+{Narayan} R.,  {Yi} I.,  1995b, \mn@doi [\apj] {10.1086/176343}, \href
+  {http://adsabs.harvard.edu/abs/1995ApJ...452..710N} {452, 710}
+
+\bibitem[\protect\citeauthoryear{{Noble} \& {Krolik}}{{Noble} \&
+  {Krolik}}{2009}]{Noble09}
+{Noble} S.~C.,  {Krolik} J.~H.,  2009, \mn@doi [\apj]
+  {10.1088/0004-637X/703/1/964}, \href
+  {http://adsabs.harvard.edu/abs/2009ApJ...703..964N} {703, 964}
+
+\bibitem[\protect\citeauthoryear{{O'Neill}, {Reynolds}  \& {Miller}}{{O'Neill}
+  et~al.}{2009}]{ReynoldsMiller09b}
+{O'Neill} S.~M.,  {Reynolds} C.~S.,   {Miller} M.~C.,  2009, \mn@doi [\apj]
+  {10.1088/0004-637X/693/2/1100}, \href
+  {http://adsabs.harvard.edu/abs/2009ApJ...693.1100O} {693, 1100}
+
+\bibitem[\protect\citeauthoryear{{O'Neill}, {Reynolds}, {Miller}  \&
+  {Sorathia}}{{O'Neill} et~al.}{2011}]{Oneill11}
+{O'Neill} S.~M.,  {Reynolds} C.~S.,  {Miller} M.~C.,   {Sorathia} K.~A.,  2011,
+  \mn@doi [\apj] {10.1088/0004-637X/736/2/107}, \href
+  {http://adsabs.harvard.edu/abs/2011ApJ...736..107O} {736, 107}
+
+\bibitem[\protect\citeauthoryear{{\O ksendal}}{{\O ksendal}}{2014}]{Oksendal}
+{\O ksendal} B.,  2014, Stochastic Differential Equations: An Introduction with
+  Applications, 6 edn.
+Universitext, Springer
+
+\bibitem[\protect\citeauthoryear{{Pandit} \& {Wu}}{{Pandit} \&
+  {Wu}}{2001}]{PanditWu}
+{Pandit} S.~M.,  {Wu} S.-M.,  2001, Time Series and System Analysis With
+  Applications.
+Krieger Pub Co.
+
+\bibitem[\protect\citeauthoryear{{Peterson}}{{Peterson}}{1997}]{Peterson}
+{Peterson} Bradley M.,  1997, An Introduction to Active Galactic Nuclei.
+Cambridge University Press
+
+\bibitem[\protect\citeauthoryear{{Poutanen} \& {Fabian}}{{Poutanen} \&
+  {Fabian}}{1999}]{PoutanenFabian99}
+{Poutanen} J.,  {Fabian} A.~C.,  1999, \mn@doi [\mnras]
+  {10.1046/j.1365-8711.1999.02735.x}, \href
+  {http://adsabs.harvard.edu/abs/1999MNRAS.306L..31P} {306, L31}
+
+\bibitem[\protect\citeauthoryear{{Pringle}}{{Pringle}}{1981}]{PringleARAA}
+{Pringle} J.~E.,  1981, \mn@doi [\araa] {10.1146/annurev.aa.19.090181.001033},
+  \href {http://adsabs.harvard.edu/abs/1981ARA%26A..19..137P} {19, 137}
+
+\bibitem[\protect\citeauthoryear{{Rauch}, {Striebel}  \& {Tung}}{{Rauch}
+  et~al.}{1965}]{RTS65}
+{Rauch} H.~E.,  {Striebel} C.~T.,   {Tung} F.,  1965, \mn@doi [AIAA Journal]
+  {10.2514/3.3166}, \href {http://adsabs.harvard.edu/abs/1965AIAAJ...3.1445.}
+  {3, 1445}
+
+\bibitem[\protect\citeauthoryear{{Rees}}{{Rees}}{1984}]{ReesARAA}
+{Rees} M.~J.,  1984, \mn@doi [\araa] {10.1146/annurev.aa.22.090184.002351},
+  \href {http://adsabs.harvard.edu/abs/1984ARA%26A..22..471R} {22, 471}
+
+\bibitem[\protect\citeauthoryear{{Revalski}, {Nowak}, {Wiita}, {Wehrle}  \&
+  {Unwin}}{{Revalski} et~al.}{2014}]{Revalski14}
+{Revalski} M.,  {Nowak} D.,  {Wiita} P.~J.,  {Wehrle} A.~E.,   {Unwin} S.~C.,
+  2014, \mn@doi [\apj] {10.1088/0004-637X/785/1/60}, \href
+  {http://adsabs.harvard.edu/abs/2014ApJ...785...60R} {785, 60}
+
+\bibitem[\protect\citeauthoryear{{Reynolds} \& {Miller}}{{Reynolds} \&
+  {Miller}}{2009}]{ReynoldsMiller09a}
+{Reynolds} C.~S.,  {Miller} M.~C.,  2009, \mn@doi [\apj]
+  {10.1088/0004-637X/692/1/869}, \href
+  {http://adsabs.harvard.edu/abs/2009ApJ...692..869R} {692, 869}
+
+\bibitem[\protect\citeauthoryear{{Rybicki} \& {Press}}{{Rybicki} \&
+  {Press}}{1992}]{PressRybicki92}
+{Rybicki} G.~B.,  {Press} W.~H.,  1992, \mn@doi [\apj] {10.1086/171845}, \href
+  {http://adsabs.harvard.edu/abs/1992ApJ...398..169R} {398, 169}
+
+\bibitem[\protect\citeauthoryear{{Rybicki} \& {Press}}{{Rybicki} \&
+  {Press}}{1995}]{PressRybicki95}
+{Rybicki} G.~B.,  {Press} W.~H.,  1995, \mn@doi [Physical Review Letters]
+  {10.1103/PhysRevLett.74.1060}, \href
+  {http://adsabs.harvard.edu/abs/1995PhRvL..74.1060R} {74, 1060}
+
+\bibitem[\protect\citeauthoryear{{Scargle}}{{Scargle}}{1981}]{Scargle81}
+{Scargle} J.~D.,  1981, \mn@doi [\apjs] {10.1086/190706}, \href
+  {http://adsabs.harvard.edu/abs/1981ApJS...45....1S} {45, 1}
+
+\bibitem[\protect\citeauthoryear{{Schnittman} \& {Krolik}}{{Schnittman} \&
+  {Krolik}}{2013}]{Schnittman13a}
+{Schnittman} J.~D.,  {Krolik} J.~H.,  2013, \mn@doi [\apj]
+  {10.1088/0004-637X/777/1/11}, \href
+  {http://adsabs.harvard.edu/abs/2013ApJ...777...11S} {777, 11}
+
+\bibitem[\protect\citeauthoryear{{Schnittman}, {Krolik}  \&
+  {Hawley}}{{Schnittman} et~al.}{2006}]{Schnittman06}
+{Schnittman} J.~D.,  {Krolik} J.~H.,   {Hawley} J.~F.,  2006, \mn@doi [\apj]
+  {10.1086/507421}, \href {http://adsabs.harvard.edu/abs/2006ApJ...651.1031S}
+  {651, 1031}
+
+\bibitem[\protect\citeauthoryear{{Schnittman}, {Krolik}  \&
+  {Noble}}{{Schnittman} et~al.}{2013}]{Schnittman13b}
+{Schnittman} J.~D.,  {Krolik} J.~H.,   {Noble} S.~C.,  2013, \mn@doi [\apj]
+  {10.1088/0004-637X/769/2/156}, \href
+  {http://adsabs.harvard.edu/abs/2013ApJ...769..156S} {769, 156}
+
+\bibitem[\protect\citeauthoryear{{Sergeev}, {Doroshenko}, {Golubinskiy},
+  {Merkulova}  \& {Sergeeva}}{{Sergeev} et~al.}{2005}]{Sergeev05}
+{Sergeev} S.~G.,  {Doroshenko} V.~T.,  {Golubinskiy} Y.~V.,  {Merkulova} N.~I.,
+    {Sergeeva} E.~A.,  2005, \mn@doi [\apj] {10.1086/427820}, \href
+  {http://adsabs.harvard.edu/abs/2005ApJ...622..129S} {622, 129}
+
+\bibitem[\protect\citeauthoryear{{Shakura} \& {Sunyaev}}{{Shakura} \&
+  {Sunyaev}}{1973}]{ShakuraSunyaev73}
+{Shakura} N.~I.,  {Sunyaev} R.~A.,  1973, \aap, \href
+  {http://adsabs.harvard.edu/abs/1973A%26A....24..337S} {24, 337}
+
+\bibitem[\protect\citeauthoryear{{Simon}}{{Simon}}{2006}]{Simon}
+{Simon} D.,  2006, Optimal State Estimation: Kalman, H Infinity, and Nonlinear
+  Approaches.
+Wiley-Interscience
+
+\bibitem[\protect\citeauthoryear{{Smith} et~al.,}{{Smith}
+  et~al.}{2012}]{SmithStumpe12}
+{Smith} J.~C.,  et~al., 2012, \mn@doi [\pasp] {10.1086/667697}, \href
+  {http://adsabs.harvard.edu/abs/2012PASP..124.1000S} {124, 1000}
+
+\bibitem[\protect\citeauthoryear{{Starling}, {Siemiginowska}, {Uttley}  \&
+  {Soria}}{{Starling} et~al.}{2004}]{Starling04}
+{Starling} R.~L.~C.,  {Siemiginowska} A.,  {Uttley} P.,   {Soria} R.,  2004,
+  \mn@doi [\mnras] {10.1111/j.1365-2966.2004.07167.x}, \href
+  {http://adsabs.harvard.edu/abs/2004MNRAS.347...67S} {347, 67}
+
+\bibitem[\protect\citeauthoryear{{Stengel}}{{Stengel}}{1994}]{Stengel}
+{Stengel} Robert F.,  1994, Optimal Control and Estimation.
+Dover Books on Mathematics, Dover Publications
+
+\bibitem[\protect\citeauthoryear{{Stumpe} et~al.,}{{Stumpe}
+  et~al.}{2012}]{StumpeSmith12}
+{Stumpe} M.~C.,  et~al., 2012, \mn@doi [\pasp] {10.1086/667698}, \href
+  {http://adsabs.harvard.edu/abs/2012PASP..124..985S} {124, 985}
+
+\bibitem[\protect\citeauthoryear{{Thompson} et~al.,}{{Thompson}
+  et~al.}{2015}]{DR24}
+{Thompson} S.~E.,  et~al., 2015, Technical Report KSCI-19064-001, Kepler Data
+  Release 24 Notes.
+National Aeronautics and Space Administration, NASA Ames Research Center,
+  Moffett Field, California
+
+\bibitem[\protect\citeauthoryear{{Titarchuk}, {Shaposhnikov}  \&
+  {Arefiev}}{{Titarchuk} et~al.}{2007}]{Titarchuk07}
+{Titarchuk} L.,  {Shaposhnikov} N.,   {Arefiev} V.,  2007, \mn@doi [\apj]
+  {10.1086/512027}, \href {http://adsabs.harvard.edu/abs/2007ApJ...660..556T}
+  {660, 556}
+
+\bibitem[\protect\citeauthoryear{{Ulrich}, {Maraschi}  \& {Urry}}{{Ulrich}
+  et~al.}{1997}]{UrryARAA}
+{Ulrich} M.-H.,  {Maraschi} L.,   {Urry} C.~M.,  1997, \mn@doi [\araa]
+  {10.1146/annurev.astro.35.1.445}, \href
+  {http://adsabs.harvard.edu/abs/1997ARA%26A..35..445U} {35, 445}
+
+\bibitem[\protect\citeauthoryear{{Uttley} \& {Casella}}{{Uttley} \&
+  {Casella}}{2014}]{UttleyAccretion}
+{Uttley} P.,  {Casella} P.,  2014, in {Maurizio} F.,  {Belloni} T.,  {Casella}
+  P.,  {Gilfanov} M.,  {Jonker} P.,   {King} A.,  eds, Space Sciences Series of
+  ISSI, Vol.~49, The Physics of Accretion onto Black Holes.
+Springer, Chapt.~21, pp 453--476
+
+\bibitem[\protect\citeauthoryear{{Uttley}, {McHardy}  \& {Papadakis}}{{Uttley}
+  et~al.}{2002}]{Uttley02}
+{Uttley} P.,  {McHardy} I.~M.,   {Papadakis} I.~E.,  2002, \mn@doi [\mnras]
+  {10.1046/j.1365-8711.2002.05298.x}, \href
+  {http://adsabs.harvard.edu/abs/2002MNRAS.332..231U} {332, 231}
+
+\bibitem[\protect\citeauthoryear{{Uttley}, {Edelson}, {McHardy}, {Peterson}  \&
+  {Markowitz}}{{Uttley} et~al.}{2003}]{Uttley03}
+{Uttley} P.,  {Edelson} R.,  {McHardy} I.~M.,  {Peterson} B.~M.,   {Markowitz}
+  A.,  2003, \mn@doi [\apjl] {10.1086/373887}, \href
+  {http://adsabs.harvard.edu/abs/2003ApJ...584L..53U} {584, L53}
+
+\bibitem[\protect\citeauthoryear{{Uttley}, {McHardy}  \& {Vaughan}}{{Uttley}
+  et~al.}{2005}]{UMV05}
+{Uttley} P.,  {McHardy} I.~M.,   {Vaughan} S.,  2005, \mn@doi [\mnras]
+  {10.1111/j.1365-2966.2005.08886.x}, \href
+  {http://adsabs.harvard.edu/abs/2005MNRAS.359..345U} {359, 345}
+
+\bibitem[\protect\citeauthoryear{{Van Cleve} \& {Caldwell}}{{Van Cleve} \&
+  {Caldwell}}{2009}]{KIH}
+{Van Cleve} J.~E.,  {Caldwell} D.~A.,  2009, Technical Report KSCI-19033,
+  Kepler Instrument Handbook.
+National Aeronautics and Space Administration, NASA Ames Research Center,
+  Moffett Field, California
+
+\bibitem[\protect\citeauthoryear{{Vaughan} \& {Fabian}}{{Vaughan} \&
+  {Fabian}}{2004}]{Vaughan04}
+{Vaughan} S.,  {Fabian} A.~C.,  2004, \mn@doi [\mnras]
+  {10.1111/j.1365-2966.2004.07456.x}, \href
+  {http://adsabs.harvard.edu/abs/2004MNRAS.348.1415V} {348, 1415}
+
+\bibitem[\protect\citeauthoryear{{Veledina}, {Poutanen}  \& {Vurm}}{{Veledina}
+  et~al.}{2013}]{Veledina13}
+{Veledina} A.,  {Poutanen} J.,   {Vurm} I.,  2013, \mn@doi [\mnras]
+  {10.1093/mnras/stt124}, \href
+  {http://adsabs.harvard.edu/abs/2013MNRAS.430.3196V} {430, 3196}
+
+\bibitem[\protect\citeauthoryear{{Wanders} et~al.,}{{Wanders}
+  et~al.}{1997}]{Wanders97}
+{Wanders} I.,  et~al., 1997, \mn@doi [\apjs] {10.1086/313054}, \href
+  {http://adsabs.harvard.edu/abs/1997ApJS..113...69W} {113, 69}
+
+\bibitem[\protect\citeauthoryear{{Wehrle}, {Wiita}, {Unwin}, {Di Lorenzo},
+  {Revalski}, {Silano}  \& {Sprague}}{{Wehrle} et~al.}{2013}]{Wehrle13}
+{Wehrle} A.~E.,  {Wiita} P.~J.,  {Unwin} S.~C.,  {Di Lorenzo} P.,  {Revalski}
+  M.,  {Silano} D.,   {Sprague} D.,  2013, \mn@doi [\apj]
+  {10.1088/0004-637X/773/2/89}, \href
+  {http://adsabs.harvard.edu/abs/2013ApJ...773...89W} {773, 89}
+
+\bibitem[\protect\citeauthoryear{{Wiberg}}{{Wiberg}}{1971}]{Wiberg}
+{Wiberg} Donald M.,  1971, Schaum's Outline of Theory and Problems of State
+  Space and Linear Systems.
+Mcgraw-Hill
+
+\bibitem[\protect\citeauthoryear{{Williams} \& {Carini}}{{Williams} \&
+  {Carini}}{2015}]{CariniWilliamsAAS}
+{Williams} J.,  {Carini} M.~T.,  2015, in American Astronomical Society Meeting
+  Abstracts. p. \#144.56
+
+\bibitem[\protect\citeauthoryear{{Wood}, {Titarchuk}, {Ray}, {Wolff},
+  {Lovellette}  \& {Bandyopadhyay}}{{Wood} et~al.}{2001}]{Wood01}
+{Wood} K.~S.,  {Titarchuk} L.,  {Ray} P.~S.,  {Wolff} M.~T.,  {Lovellette}
+  M.~N.,   {Bandyopadhyay} R.~M.,  2001, \mn@doi [\apj] {10.1086/323768}, \href
+  {http://adsabs.harvard.edu/abs/2001ApJ...563..246W} {563, 246}
+
+\makeatother
+\end{thebibliography}

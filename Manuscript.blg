@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Manuscript.aux
+The style file: mnras.bst
+Database file #1: /home/vish/Documents/TeX/bibliography/allrefs.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 132 entries,
+            2881 wiz_defined-function locations,
+            1790 strings with 42471 characters,
+and the built_in function-call counts, 64998 in all, are:
+= -- 5017
+> -- 4768
+< -- 426
++ -- 2138
+- -- 687
+* -- 7786
+:= -- 10280
+add.period$ -- 0
+call.type$ -- 132
+change.case$ -- 271
+chr.to.int$ -- 130
+cite$ -- 132
+duplicate$ -- 3260
+empty$ -- 3435
+format.name$ -- 1121
+if$ -- 11350
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 146
+newline$ -- 439
+num.names$ -- 983
+pop$ -- 838
+preamble$ -- 2
+purify$ -- 528
+quote$ -- 0
+skip$ -- 1941
+stack$ -- 0
+substring$ -- 3269
+swap$ -- 1848
+text.length$ -- 565
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1134
+warning$ -- 0
+while$ -- 1006
+width$ -- 0
+write$ -- 1363
