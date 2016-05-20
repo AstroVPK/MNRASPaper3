@@ -1,3 +1,4 @@
+import carmcmc as cmcmc
 import numpy as np
 import numpy.polynomial.polynomial as poly
 import math as m
@@ -19,16 +20,15 @@ import time
 goldenRatio=1.61803398875
 fhgt=10.0
 fwid=fhgt*goldenRatio
-largeFontSize=48
 normalFontSize=32
 smallFontSize=24
 footnoteFontSize=20
 scriptFontSize=16
 tinyFontSize=12
-set_plot_params(fontfamily='serif',fontstyle='normal',fontvariant='normal',fontweight='normal',fontstretch='normal',fontsize=largeFontSize,useTex='True')
+set_plot_params(fontfamily='serif',fontstyle='normal',fontvariant='normal',fontweight='normal',fontstretch='normal',fontsize=smallFontSize,useTex='True')
 
-keplerPath = "/home/vish/Documents/MNRASPaper3/Kepler/"
-outPath = "/home/vish/Documents/MNRASPaper3/Zw229-15Results/PLATINUM/"
+keplerPath = "/home/exarkun/Documents/MNRASPaper3/Kepler/"
+outPath = "/home/exarkun/Documents/MNRASPaper3/Zw229-15Results/PLATINUM/"
 
 keplerObj = "kplr006932990Carini"
 redShift = 0.0275
@@ -51,31 +51,30 @@ legendFig1PSD=True
 legendFig1LC=True
 plotMockLC=False
 ptFactor=5000
-numFreqs=250
 
 makeFig2=True
 legendFig2GFunc=True
-numTimes=250
+numTimes=2500
 
-makeFig3=True
+makeFig3=False
 
-makeFig4=True
+makeFig4=False
 legendFig4distPSD=True
 numFreqs=250
 
-makeFig5=True
+makeFig5=False
 sampleFactor=1
 nBinsFig5 = 50
 
-makeFig6=True
+makeFig6=False
 nBinsFig6 = 50
 
-makeFig7=True
+makeFig7=False
 nBinsFig7 = 50
 
-makeFig8=True
+makeFig8=False
 
-makeFig9=True
+makeFig9=False
 
 def eval_greens_func(tVal,ar_root0,ar_root1):
 	return (np.exp(ar_root0[:]*tVal[:]) - np.exp(ar_root1[:]*tVal[:]))/(ar_root0[:]-ar_root1[:])
@@ -172,8 +171,6 @@ psd_centroid = sample.get_samples('psd_centroid')
 
 poly_coefs = ma_coefs*sigma
 
-pdb.set_trace()
-
 timeFig1CStart=time.time()
 if ((makeFig1==True) or (makeFig2==True) or (makeFig4==True) or (makeAllFigs==True)):
 	if ((makeFig1==True) or (makeAllFigs==True)):
@@ -183,11 +180,7 @@ if ((makeFig1==True) or (makeFig2==True) or (makeFig4==True) or (makeAllFigs==Tr
 		predicted_high = predicted_mean + np.sqrt(predicted_var)
 
 	nLevel = 2.0*dt*np.mean(measerr_scale*m.pow(mean_yerr,2.0))
-	#psd_low, psd_high, psd_mid, frequencies = sample.plot_power_spectrum(percentile=95.0, nsamples=numSamples/ptFactor, doShow=False)
-	psdArr = np.zeros(numSamples,numFreqs)
-	for i in xrange(numSamples):
-		Theta = ar_coefs[:,:]
-		freqs, psd, = 
+	psd_low, psd_high, psd_mid, frequencies = sample.plot_power_spectrum(percentile=95.0, nsamples=numSamples/ptFactor,doShow=False)
 
 	currf = 0
 	for i in xrange(frequencies.shape[0]):
@@ -203,7 +196,8 @@ print "Fig1 Calculations: %f (sec) i.e. %f (min)"%((timeFig1CFinish-timeFig1CSta
 
 timeFig2CStart=time.time()
 if ((makeFig2==True) or (makeAllFigs==True)):
-	times = np.logspace(m.log10(dt), m.log10(numCads*dt), num=numTimes)
+	#times = np.logspace(m.log10(dt), m.log10(numCads*dt), num=numTimes)
+	times = np.linspace(0.0, numCads*dt, num = numTimes)
 	gfunc_low, gfunc_high, gfunc_mid, times = get_greens_func(times,95.0,ar_roots)
 timeFig2CFinish=time.time()
 print "Fig2 Calculations: %f (sec) i.e. %f (min)"%((timeFig2CFinish-timeFig2CStart),(timeFig2CFinish-timeFig2CStart)/60.0)
@@ -326,10 +320,9 @@ if ((makeFig1==True) or (makeAllFigs==True)):
 	rowStart=50
 	numRows=225
 	numCols=numRows # The plot dimensions are already in the Golden ratio.'''
-	fig2 = plt.figure(0,figsize=(fwid,fhgt))
+	fig2 = plt.figure(1,figsize=(fwid,fhgt))
 	gs = gridspec.GridSpec(500, 525) 
-	#ax1 = fig1.add_subplot(gs[rowStart:rowStart+numRows,colStart:colStart+numCols])
-	ax1 = fig1.add_subplot(gs[:,:])
+	ax1 = fig1.add_subplot(gs[rowStart:rowStart+numRows,colStart:colStart+numCols])
 	ax1.loglog(frequencies,psd_mid,'-', color='#666666',label='median PSD',zorder=5,subsx=[],subsy=[])
 	ax1.fill_between(frequencies, psd_low, psd_high, color='#b3b3b3',zorder=0)
 
@@ -410,105 +403,57 @@ if ((makeFig2==True) or (makeAllFigs==True)):
 	gs1 = gridspec.GridSpec(numRows, numCols)
 
 	ax2 = fig2.add_subplot(gs1[:,:])
-	ax2.plot(times, gfunc_mid, '-', color='#666666',label='median $G(t)$',zorder=5,subsx=[],subsy=[])
+	ax2.plot(times, gfunc_mid, '-', color='#666666',label='median $G(t)$',zorder=5)#,subsx=[],subsy=[])
 	ax2.fill_between(times, gfunc_low, gfunc_high, color='#b3b3b3',zorder=0)
 	ax2.axvspan(xmin=np.min(times), xmax=noise_lim_time, ymin=0, ymax=1, color='#fbb4ae', zorder=0)
 	ax2.vlines(x=t_max_med, ymin=m.pow(10.0,-11.0), ymax=m.pow(10.0,1.0), colors='#d95f02', linestyles='--',linewidths=2,label=r'$t_{\mathrm{max}}$',zorder=10)
 	ax2.vlines(x=tau_solution_med, ymin=m.pow(10.0,-11.0), ymax=m.pow(10.0,1.0), colors='#d95f02', linestyles='-.',linewidths=2,label=r'$t_{\mathrm{e-fold}}$',zorder=10)
 
-	ax2.set_xlabel(r'{${\textstyle t}$~{\large (d)}')
-	ax2.set_xlim(np.min(times),np.max(times))
+	ax2.set_xlabel(r'{${\textstyle t}$~{\LARGE (d)}')
+	ax2.set_xlim(np.min(times),200.0)
 	numXTicks=6
 	xTicks=np.zeros(numXTicks)
-	for i in xrange(numXTicks-1):
-		xTicks[i]=m.pow(10.0,i-1)
-	xTicks[5]=noise_lim_time
+	for i in xrange(numXTicks-2):
+		xTicks[i]=50.0*(i + 1)#m.pow(10.0,i-1)
+	xTicks[4]=t_max_med
+	xTicks[5]=tau_solution_med
 	ax2.set_xticks(xTicks)
 	xLabels = [item.get_text() for item in ax2.get_xticklabels()]
-	for i in xrange(numXTicks-1):
-		xLabels[i]=r'${\scriptscriptstyle 10^{%d}}$'%(m.log10(xTicks[i]))
-	xLabels[5]=r'${\scriptstyle t_{\mathrm{noise}}}$'
+	for i in xrange(numXTicks-2):
+		xLabels[i]=r'${\scriptstyle %2.1f}$'%(xTicks[i])
+	xLabels[4]=r'${\scriptstyle t_{\mathrm{max}} = %3.1f}${\Large ~d}'%(t_max_med)
+	xLabels[5]=r'${\scriptstyle t_{\mathrm{e-fold}} = %3.1f}${\Large ~d}'%(tau_solution_med)
 	ax2.set_xticklabels(xLabels)
 
-	ax2.set_ylabel(r'${\scriptstyle  \log_{10}G(t) }$~{\normalsize (arb. units)}')
-	ax2.set_ylim(m.pow(10.0,-11.0),m.pow(10.0,1.0))
-	numYTicks=3
+	ax2.set_ylabel(r'${\textstyle  G(t) }$~{\LARGE (arb. units)}')
+	ax2.set_ylim(0.0,1.1*np.max(gfunc_high))
+	numYTicks=4
 	yTicks=np.zeros(numYTicks)
 	for i in xrange(numYTicks):
-		yTicks[i]=m.pow(10.0,-4*i-2)
+		yTicks[i]=0.5*i#m.pow(10.0,-4*i-2)
 	ax2.set_yticks(yTicks)
 	yLabels = [item.get_text() for item in ax2.get_yticklabels()]
 	for i in xrange(numYTicks):
-		yLabels[i]=r'${\scriptscriptstyle 10^{%d}}$'%(m.log10(yTicks[i]))
+		yLabels[i]=r'${\scriptstyle %3.2f}$'%(yTicks[i])
 	ax2.set_yticklabels(yLabels)
 
 	handles2,labels2=ax2.get_legend_handles_labels()
 	GFuncVarPatch=mpatches.Patch(color='#b3b3b3',label=r'$95^{\mathrm{th}}$-percentile of $G(t)$')
-	noisePatch=mpatches.Patch(color='#fbb4ae',label=r'noise-dominates')
+	#noisePatch=mpatches.Patch(color='#fbb4ae',label=r'noise-dominates')
 	handles2.append(GFuncVarPatch)
-	handles2.append(noisePatch)
+	#handles2.append(noisePatch)
 	labels2.append(r'$95^{\mathrm{th}}$-percentile of $G(t)$')
-	labels2.append(r'noise dominates')
-	newOrder2=[0,3,1,2,4]
+	#labels2.append(r'noise dominates')
+	newOrder2=[0,3,1,2,]
 	handles2=[handles2[i] for i in newOrder2]
 	labels2=[labels2[i] for i in newOrder2]
 	if (legendFig2GFunc==True):
-		ax2.legend(handles2,labels2,loc=3,ncol=1,fancybox=True,fontsize=scriptFontSize)
+		ax2.legend(handles2,labels2,loc=1,ncol=1,fancybox=True,fontsize=scriptFontSize)
 
 	colStart=175
 	rowStart=175
 	numRows=625
 	numCols=numRows # The plot dimensions are already in the Golden ratio.
-
-	ax1 = fig2.add_subplot(gs1[rowStart:rowStart+numRows,colStart:colStart+numCols])
-
-	ax1.set_title(r'$t_{\mathrm{max}}$ v/s $t_{\mathrm{e-fold}}$',fontsize=footnoteFontSize)
-	scatPlot = ax1.scatter(t_maxes[:].real,tau_solution[:],c=best_loglike-loglike,marker='.',cmap=colormap.gist_rainbow_r,linewidth = 0,zorder=20)
-
-	colStart=205
-	rowStart=475
-	numRows=180
-	numCols=numRows
-
-	ax3 = fig2.add_subplot(gs1[rowStart:rowStart+numRows,colStart:colStart+numCols])
-	ax3.spines['top'].set_color('none')
-	ax3.spines['bottom'].set_color('none')
-	ax3.spines['left'].set_color('none')
-	ax3.spines['right'].set_color('none')
-	ax3.tick_params(labelcolor='none', top='off', bottom='off', left='off', right='off')
-	numCBarTicks=3
-	cBarTicks=np.zeros(numCBarTicks)
-	for i in xrange(numCBarTicks):
-		cBarTicks[i]=-4.5*i-1.5
-	cBar = plt.colorbar(scatPlot, ax=ax3, orientation='horizontal',ticks=cBarTicks,format=r'$\scriptscriptstyle %2.1f$')
-	cBar.set_label(r'Relative Likelihood',fontsize=scriptFontSize)
-
-	ax1.set_xlim(5.0,6.3)
-	numXTicks=3
-	xTicks=np.zeros(numXTicks)
-	for i in xrange(numXTicks):
-		xTicks[i]=0.4*i+5.2
-	ax1.set_xticks(xTicks)
-	xLabels = [item.get_text() for item in ax1.get_xticklabels()]
-	for i in xrange(numXTicks):
-		xLabels[i]=r'${\scriptscriptstyle %2.1f}$'%(xTicks[i])
-	ax1.set_xticklabels(xLabels)
-	ax1.set_xlabel(r'$t_{\mathrm{max}}$~{\large (d)}')
-
-	ax1.set_ylim(40.0,100.0)
-	numYTicks=3
-	yTicks=np.zeros(numYTicks)
-	for i in xrange(numYTicks):
-		yTicks[i]=20*i+50
-	ax1.set_yticks(yTicks)
-	yLabels = [item.get_text() for item in ax1.get_yticklabels()]
-	for i in xrange(numYTicks):
-		yLabels[i]=r'${\scriptscriptstyle %2.1f}$'%(yTicks[i])
-	ax1.set_yticklabels(yLabels)
-	ax1.set_ylabel(r'$t_{\mathrm{e-fold}}$~{\large (d)}')
-
-	ax1.annotate(r'$t_{\mathrm{max}} = %3.1f^{+%2.1f}_{-%2.1f}$ (d)'%(t_max_med,t_max_high-t_max_med,t_max_med-t_max_low),xy=(0.7,0.85),xycoords='axes fraction',textcoords='axes fraction',ha='center',va='center',multialignment='center',fontsize=24)
-	ax1.annotate(r'$t_{\mathrm{e-fold}} = %2.1f^{+%2.1f}_{-%2.1f}$ (d)'%(tau_solution_med,tau_solution_high-tau_solution_med,tau_solution_med-tau_solution_low),xy=(0.71,0.75),xycoords='axes fraction',textcoords='axes fraction',ha='center',va='center',multialignment='center',fontsize=24)
 
 	plt.tight_layout()
 	figure2JPG=outPath+'Zw229-15_GF.jpg'
@@ -518,6 +463,72 @@ if ((makeFig2==True) or (makeAllFigs==True)):
 		plt.savefig(figure2PDF,dpi=300)
 	if (makeEPS==True):
 		figure2EPS=outPath+'Zw229-15_GF.eps'
+
+	figm2 = plt.figure(-3,figsize=(fwid,fhgt))
+	numRows=1000
+	numCols=numRows
+	gsm1 = gridspec.GridSpec(numRows, numCols)
+
+	axm1 = figm2.add_subplot(gsm1[rowStart:rowStart+numRows,colStart:colStart+numCols])
+
+	axm1.set_title(r'$t_{\mathrm{max}}$ v/s $t_{\mathrm{e-fold}}$',fontsize=footnoteFontSize)
+	scatPlot = axm1.scatter(t_maxes[:].real,tau_solution[:],c=best_loglike-loglike,marker='.',cmap=colormap.gist_rainbow_r,linewidth = 0,zorder=20)
+
+	colStart=205
+	rowStart=475
+	numRows=180
+	numCols=numRows
+
+	axm3 = figm2.add_subplot(gs1[rowStart:rowStart+numRows,colStart:colStart+numCols])
+	axm3.spines['top'].set_color('none')
+	axm3.spines['bottom'].set_color('none')
+	axm3.spines['left'].set_color('none')
+	axm3.spines['right'].set_color('none')
+	axm3.tick_params(labelcolor='none', top='off', bottom='off', left='off', right='off')
+	numCBarTicks=3
+	cBarTicks=np.zeros(numCBarTicks)
+	for i in xrange(numCBarTicks):
+		cBarTicks[i]=-4.5*i-1.5
+	cBar = plt.colorbar(scatPlot, ax=axm3, orientation='horizontal',ticks=cBarTicks,format=r'$\scriptscriptstyle %2.1f$')
+	cBar.set_label(r'Relative Likelihood',fontsize=scriptFontSize)
+
+	axm1.set_xlim(5.0,6.3)
+	numXTicks=3
+	xTicks=np.zeros(numXTicks)
+	for i in xrange(numXTicks):
+		xTicks[i]=0.4*i+5.2
+	axm1.set_xticks(xTicks)
+	xLabels = [item.get_text() for item in axm1.get_xticklabels()]
+	for i in xrange(numXTicks):
+		xLabels[i]=r'${\scriptscriptstyle %2.1f}$'%(xTicks[i])
+	axm1.set_xticklabels(xLabels)
+	axm1.set_xlabel(r'$t_{\mathrm{max}}$~{\large (d)}')
+
+	axm1.set_ylim(40.0,100.0)
+	numYTicks=3
+	yTicks=np.zeros(numYTicks)
+	for i in xrange(numYTicks):
+		yTicks[i]=20*i+50
+	axm1.set_yticks(yTicks)
+	yLabels = [item.get_text() for item in axm1.get_yticklabels()]
+	for i in xrange(numYTicks):
+		yLabels[i]=r'${\scriptscriptstyle %2.1f}$'%(yTicks[i])
+	axm1.set_yticklabels(yLabels)
+	axm1.set_ylabel(r'$t_{\mathrm{e-fold}}$~{\large (d)}')
+
+	axm1.annotate(r'$t_{\mathrm{max}} = %3.1f^{+%2.1f}_{-%2.1f}$ (d)'%(t_max_med,t_max_high-t_max_med,t_max_med-t_max_low),xy=(0.7,0.85),xycoords='axes fraction',textcoords='axes fraction',ha='center',va='center',multialignment='center',fontsize=24)
+	axm1.annotate(r'$t_{\mathrm{e-fold}} = %2.1f^{+%2.1f}_{-%2.1f}$ (d)'%(tau_solution_med,tau_solution_high-tau_solution_med,tau_solution_med-tau_solution_low),xy=(0.71,0.75),xycoords='axes fraction',textcoords='axes fraction',ha='center',va='center',multialignment='center',fontsize=24)
+
+	plt.tight_layout()
+
+	figurem2JPG=outPath+'Zw229-15_GFm.jpg'
+	plt.savefig(figurem2JPG,dpi=300)
+	if (makePDF==True):
+		figure2PDF=outPath+'Zw229-15_GFm.pdf'
+		plt.savefig(figurem2PDF,dpi=300)
+	if (makeEPS==True):
+		figure2EPS=outPath+'Zw229-15_GFm.eps'
+
 		plt.savefig(figure2EPS,dpi=300)
 timeFig2PFinish=time.time()
 print "Fig2 Plots: %f (sec) i.e. %f (min)"%((timeFig2PFinish-timeFig2PStart),(timeFig2PFinish-timeFig2PStart)/60.0)
