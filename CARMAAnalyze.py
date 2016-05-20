@@ -1,4 +1,3 @@
-import carmcmc as cmcmc
 import numpy as np
 import numpy.polynomial.polynomial as poly
 import math as m
@@ -47,11 +46,12 @@ makePDF=False
 
 makeAllFigs=False
 
-makeFig1=True
+makeFig1=False
 legendFig1PSD=True
 legendFig1LC=True
 plotMockLC=False
 ptFactor=5000
+numFreqs=250
 
 makeFig2=True
 legendFig2GFunc=True
@@ -172,6 +172,8 @@ psd_centroid = sample.get_samples('psd_centroid')
 
 poly_coefs = ma_coefs*sigma
 
+pdb.set_trace()
+
 timeFig1CStart=time.time()
 if ((makeFig1==True) or (makeFig2==True) or (makeFig4==True) or (makeAllFigs==True)):
 	if ((makeFig1==True) or (makeAllFigs==True)):
@@ -181,7 +183,11 @@ if ((makeFig1==True) or (makeFig2==True) or (makeFig4==True) or (makeAllFigs==Tr
 		predicted_high = predicted_mean + np.sqrt(predicted_var)
 
 	nLevel = 2.0*dt*np.mean(measerr_scale*m.pow(mean_yerr,2.0))
-	psd_low, psd_high, psd_mid, frequencies = sample.plot_power_spectrum(percentile=95.0, nsamples=numSamples/ptFactor, doShow=False)
+	#psd_low, psd_high, psd_mid, frequencies = sample.plot_power_spectrum(percentile=95.0, nsamples=numSamples/ptFactor, doShow=False)
+	psdArr = np.zeros(numSamples,numFreqs)
+	for i in xrange(numSamples):
+		Theta = ar_coefs[:,:]
+		freqs, psd, = 
 
 	currf = 0
 	for i in xrange(frequencies.shape[0]):
@@ -320,9 +326,10 @@ if ((makeFig1==True) or (makeAllFigs==True)):
 	rowStart=50
 	numRows=225
 	numCols=numRows # The plot dimensions are already in the Golden ratio.'''
-	fig2 = plt.figure(1,figsize=(fwid,fhgt))
+	fig2 = plt.figure(0,figsize=(fwid,fhgt))
 	gs = gridspec.GridSpec(500, 525) 
-	ax1 = fig1.add_subplot(gs[rowStart:rowStart+numRows,colStart:colStart+numCols])
+	#ax1 = fig1.add_subplot(gs[rowStart:rowStart+numRows,colStart:colStart+numCols])
+	ax1 = fig1.add_subplot(gs[:,:])
 	ax1.loglog(frequencies,psd_mid,'-', color='#666666',label='median PSD',zorder=5,subsx=[],subsy=[])
 	ax1.fill_between(frequencies, psd_low, psd_high, color='#b3b3b3',zorder=0)
 
