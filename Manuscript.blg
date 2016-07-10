@@ -3,46 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Manuscript.aux
 The style file: mnras.bst
 Database file #1: /home/vish/Documents/TeX/bibliography/allrefs.bib
+Warning--I'm ignoring BrockwellMarquardt05's extra "title" field
+--line 4947 of file /home/vish/Documents/TeX/bibliography/allrefs.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 132 entries,
+You've used 116 entries,
             2881 wiz_defined-function locations,
-            1790 strings with 42471 characters,
-and the built_in function-call counts, 64998 in all, are:
-= -- 5017
-> -- 4768
-< -- 426
-+ -- 2138
-- -- 687
-* -- 7786
-:= -- 10280
+            1670 strings with 36636 characters,
+and the built_in function-call counts, 57543 in all, are:
+= -- 4435
+> -- 4221
+< -- 390
++ -- 1888
+- -- 611
+* -- 6834
+:= -- 9114
 add.period$ -- 0
-call.type$ -- 132
-change.case$ -- 271
-chr.to.int$ -- 130
-cite$ -- 132
-duplicate$ -- 3260
-empty$ -- 3435
-format.name$ -- 1121
-if$ -- 11350
-int.to.chr$ -- 3
+call.type$ -- 116
+change.case$ -- 238
+chr.to.int$ -- 115
+cite$ -- 116
+duplicate$ -- 2884
+empty$ -- 3049
+format.name$ -- 987
+if$ -- 10076
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 146
-newline$ -- 439
-num.names$ -- 983
-pop$ -- 838
+missing$ -- 131
+newline$ -- 388
+num.names$ -- 879
+pop$ -- 738
 preamble$ -- 2
-purify$ -- 528
+purify$ -- 464
 quote$ -- 0
-skip$ -- 1941
+skip$ -- 1732
 stack$ -- 0
-substring$ -- 3269
-swap$ -- 1848
-text.length$ -- 565
+substring$ -- 2894
+swap$ -- 1654
+text.length$ -- 499
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1134
+type$ -- 993
 warning$ -- 0
-while$ -- 1006
+while$ -- 893
 width$ -- 0
-write$ -- 1363
+write$ -- 1200
+(There was 1 warning)
