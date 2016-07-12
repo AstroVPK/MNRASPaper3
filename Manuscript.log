@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.18)  9 JUL 2016 23:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.18)  12 JUL 2016 11:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -899,29 +899,29 @@ LaTeX Font Info:    Font shape `T1/ntxrx/b/n' in size <7.3> not available
 
 LaTeX Font Info:    Font shape `T1/ntxrx/bx/n' will be
 (Font)              scaled to size 7.3pt on input line 117.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 125.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 127.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 LaTeX Font Info:    Font shape `T1/ntxrx/m/n' will be
-(Font)              scaled to size 9.0pt on input line 133.
+(Font)              scaled to size 9.0pt on input line 135.
 LaTeX Font Info:    Font shape `T1/ntxrx/b/n' in size <9> not available
-(Font)              Font shape `T1/ntxrx/bx/n' tried instead on input line 133.
+(Font)              Font shape `T1/ntxrx/bx/n' tried instead on input line 135.
 
 LaTeX Font Info:    Font shape `T1/ntxrx/bx/n' will be
-(Font)              scaled to size 9.0pt on input line 133.
+(Font)              scaled to size 9.0pt on input line 135.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 136.
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 138.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/omsaer.fd
 File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 136.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -929,7 +929,7 @@ LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <8> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 149--150
+Underfull \hbox (badness 1616) in paragraph at lines 151--152
 []\T1/aer/m/n/9 Numerical sim-u-la-tions of light curves from ac-cre-
  []
 
@@ -942,112 +942,96 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 231.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 231.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 231.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 231.
 
-[4] <images/PowerOfSDSSK2.jpg, id=422, 4254.89626pt x 2898.83pt>
+<images/PowerOfSDSSK2.jpg, id=399, 4254.89626pt x 2898.83pt>
 File: images/PowerOfSDSSK2.jpg Graphic file (type jpg)
 
 <use images/PowerOfSDSSK2.jpg>
-Package pdftex.def Info: images/PowerOfSDSSK2.jpg used on input line 248.
+Package pdftex.def Info: images/PowerOfSDSSK2.jpg used on input line 234.
 (pdftex.def)             Requested size: 504.0pt x 343.33287pt.
-
-Underfull \hbox (badness 3449) in paragraph at lines 278--279
-\T1/aer/m/n/9 eral time-scales of interest--the peak of the Green's
+ [4]
+Underfull \hbox (badness 2111) in paragraph at lines 281--282
+\T1/aer/m/n/9 eral time-scales of in-ter-est: the peak of the Green's
  []
 
 [5]
 
 LaTeX Font Warning: Font shape `T1/aer/bx/sc' undefined
-(Font)              using `T1/aer/bx/n' instead on input line 309.
+(Font)              using `T1/aer/bx/n' instead on input line 312.
 
 
 Package hyperref Warning: Composite letter `\textasciimacron+a'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciimacron' on input line 309.
+(hyperref)                removing `\textasciimacron' on input line 312.
 
 
 Package hyperref Warning: Composite letter `\textasciimacron+i'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciimacron' on input line 309.
+(hyperref)                removing `\textasciimacron' on input line 312.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
- has been already used, duplicate ignored
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.314 
+l.315 
        <./images/PowerOfSDSSK2.jpg>]
-LaTeX Font Info:    Try loading font information for T1+aess on input line 315.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 318.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
-<images/Zw229-15_LC.jpg, id=490, 4751.7525pt x 2889.79625pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<images/Zw229-15_LC.jpg, id=494, 4751.7525pt x 2889.79625pt>
 File: images/Zw229-15_LC.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_LC.jpg>
-Package pdftex.def Info: images/Zw229-15_LC.jpg used on input line 336.
+Package pdftex.def Info: images/Zw229-15_LC.jpg used on input line 339.
 (pdftex.def)             Requested size: 504.0pt x 306.50214pt.
 
-<images/Zw229-15_PSD.jpg, id=495, 4679.4825pt x 2818.53pt>
+<images/Zw229-15_PSD.jpg, id=499, 4679.4825pt x 2818.53pt>
 File: images/Zw229-15_PSD.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_PSD.jpg>
-Package pdftex.def Info: images/Zw229-15_PSD.jpg used on input line 344.
+Package pdftex.def Info: images/Zw229-15_PSD.jpg used on input line 347.
 (pdftex.def)             Requested size: 504.0pt x 303.54517pt.
-
-<images/Zw229-15_DampedHO.jpg, id=503, 4615.2425pt x 2818.53pt>
+ [7]
+<images/Zw229-15_DampedHO.jpg, id=533, 4615.2425pt x 2818.53pt>
 File: images/Zw229-15_DampedHO.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_DampedHO.jpg>
-Package pdftex.def Info: images/Zw229-15_DampedHO.jpg used on input line 354.
+Package pdftex.def Info: images/Zw229-15_DampedHO.jpg used on input line 357.
 (pdftex.def)             Requested size: 240.0pt x 146.5257pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
-<images/Zw229-15_GF.jpg, id=533, 4715.6175pt x 2854.665pt>
+<images/Zw229-15_GF.jpg, id=536, 4715.6175pt x 2854.665pt>
 File: images/Zw229-15_GF.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_GF.jpg>
-Package pdftex.def Info: images/Zw229-15_GF.jpg used on input line 362.
+Package pdftex.def Info: images/Zw229-15_GF.jpg used on input line 365.
 (pdftex.def)             Requested size: 504.0pt x 305.08461pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-<images/Zw229-15_distPSD.jpg, id=535, 4679.4825pt x 2818.53pt>
+<images/Zw229-15_distPSD.jpg, id=538, 4679.4825pt x 2818.53pt>
 File: images/Zw229-15_distPSD.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_distPSD.jpg>
-Package pdftex.def Info: images/Zw229-15_distPSD.jpg used on input line 370.
+Package pdftex.def Info: images/Zw229-15_distPSD.jpg used on input line 373.
 (pdftex.def)             Requested size: 240.0pt x 144.54736pt.
-
-<images/Zw229-15_Times.jpg, id=541, 3452.9pt x 3545.245pt>
-File: images/Zw229-15_Times.jpg Graphic file (type jpg)
-
-<use images/Zw229-15_Times.jpg>
-Package pdftex.def Info: images/Zw229-15_Times.jpg used on input line 378.
-(pdftex.def)             Requested size: 504.0pt x 517.42838pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1056,14 +1040,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.381 \end{figure*}
-                    <./images/Zw229-15_LC.jpg>]
-<images/Zw229-15_mockLC.jpg, id=554, 4679.4825pt x 2817.52625pt>
-File: images/Zw229-15_mockLC.jpg Graphic file (type jpg)
+l.379 
+       <./images/Zw229-15_LC.jpg>]
+<images/Zw229-15_Times.jpg, id=553, 3452.9pt x 3545.245pt>
+File: images/Zw229-15_Times.jpg Graphic file (type jpg)
 
-<use images/Zw229-15_mockLC.jpg>
-Package pdftex.def Info: images/Zw229-15_mockLC.jpg used on input line 386.
-(pdftex.def)             Requested size: 240.0pt x 144.49588pt.
+<use images/Zw229-15_Times.jpg>
+Package pdftex.def Info: images/Zw229-15_Times.jpg used on input line 381.
+(pdftex.def)             Requested size: 504.0pt x 517.42838pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1072,28 +1056,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.392 
+l.387 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.392 
-       <./images/Zw229-15_PSD.jpg> <./images/Zw229-15_DampedHO.jpg>] [10pdfTeX 
-warning (ext4): destination with the same identifier (name{figure.5}) has been 
-already used, duplicate ignored
+l.387 
+       <./images/Zw229-15_PSD.jpg> <./images/Zw229-15_DampedHO.jpg>]
+<images/Zw229-15_mockLC.jpg, id=563, 4679.4825pt x 2817.52625pt>
+File: images/Zw229-15_mockLC.jpg Graphic file (type jpg)
+
+<use images/Zw229-15_mockLC.jpg>
+Package pdftex.def Info: images/Zw229-15_mockLC.jpg used on input line 389.
+(pdftex.def)             Requested size: 240.0pt x 144.49588pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.5}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.398 
+l.397 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.398 
+l.397 
        <./images/Zw229-15_GF.jpg> <./images/Zw229-15_distPSD.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1072) in paragraph at lines 400--401
+\T1/aer/m/n/9 Instrument-induced ar-ti-facts were ex-pected in the \T1/aer/m/it
+/9 Ke-
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1103,17 +1099,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.400 
-       <./images/Zw229-15_Times.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+l.401 
+       <./images/Zw229-15_Times.jpg>] [12pdfTeX warning (ext4): destination wit
+h the same identifier (name{figure.8}) has been already used, duplicate ignored
 
- [12pdfTeX warning (ext4): destination with the same identifier (name{figure.8}
-) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.420 \begin{equation}
-                      \label{eq:tdyn} <./images/Zw229-15_mockLC.jpg>] [13]
+l.417 
+       <./images/Zw229-15_mockLC.jpg>] [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1121,42 +1115,48 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package hyperref Warning: Suppressing empty link on input line 438.
 
-[15]) [16] [17] [18]
+
+Underfull \vbox (badness 3428) has occurred while \output is active []
+
+ [15])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+[17] [18]
 
 Package hyperref Warning: Composite letter `\textasciimacron+a'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciimacron' on input line 699.
+(hyperref)                removing `\textasciimacron' on input line 702.
 
 
 Package hyperref Warning: Composite letter `\textasciimacron+i'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciimacron' on input line 699.
+(hyperref)                removing `\textasciimacron' on input line 702.
 
-[19] [20]
-Underfull \hbox (badness 1092) in paragraph at lines 846--848
+[19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+Underfull \hbox (badness 1092) in paragraph at lines 849--851
 \T1/aer/m/n/9 where $[][] \OMS/ntxsy/m/n/9 ^^X N\U/ntxmia/m/it/9 }[]\OML/ntxmi/
 m/it/9 ; []\U/ntxmia/m/it/9 ~$\T1/aer/m/n/9 . The orig-i-nal ob-ser-va-tion equ
 a-
  []
 
-
-Underfull \vbox (badness 4036) has occurred while \output is active []
-
- [21]
-[22]
-Underfull \hbox (badness 1616) in paragraph at lines 981--983
+[21] [22] [23]
+Underfull \hbox (badness 1616) in paragraph at lines 984--986
 \T1/aer/m/n/9 where we have used a fixed ob-ser-va-tion ma-trix that
  []
 
-[23]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 999.
- [24
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1002.
+[24
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 999.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1002.
  (./Manuscript.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 999.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 999.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1002.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1002.
+
 Package rerunfilecheck Info: File `Manuscript.out' has not changed.
 (rerunfilecheck)             Checksum: C063EAA17C0E84021B118077383568B1;1259.
 
@@ -1170,16 +1170,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 999.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1002.
  ) 
 Here is how much of TeX's memory you used:
- 9667 strings out of 493304
- 135484 string characters out of 6139870
- 253271 words of memory out of 5000000
- 12504 multiletter control sequences out of 15000+600000
- 171044 words of font info for 325 fonts, out of 8000000 for 9000
+ 9669 strings out of 493304
+ 135505 string characters out of 6139870
+ 249024 words of memory out of 5000000
+ 12505 multiletter control sequences out of 15000+600000
+ 173005 words of font info for 327 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,17n,35p,2805b,666s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,17n,35p,2805b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1214,10 +1214,10 @@ texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Manuscript.pdf (24 pages, 8355372 bytes).
+Output written on Manuscript.pdf (24 pages, 8357558 bytes).
 PDF statistics:
- 1417 PDF objects out of 1440 (max. 8388607)
- 1331 compressed objects within 14 object streams
+ 1418 PDF objects out of 1440 (max. 8388607)
+ 1332 compressed objects within 14 object streams
  281 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
