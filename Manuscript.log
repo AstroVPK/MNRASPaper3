@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.18)  13 JUL 2016 23:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.18)  14 JUL 2016 00:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -956,14 +956,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 232.
 
-<images/PowerOfSDSSK2.jpg, id=405, 4254.89626pt x 2898.83pt>
+<images/PowerOfSDSSK2.jpg, id=404, 4254.89626pt x 2898.83pt>
 File: images/PowerOfSDSSK2.jpg Graphic file (type jpg)
 
 <use images/PowerOfSDSSK2.jpg>
 Package pdftex.def Info: images/PowerOfSDSSK2.jpg used on input line 235.
 (pdftex.def)             Requested size: 504.0pt x 343.33287pt.
  [4]
-Underfull \vbox (badness 2452) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
@@ -996,53 +996,43 @@ LaTeX Font Info:    Try loading font information for T1+aess on input line 319.
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
-<images/Zw229-15_LC.jpg, id=500, 4751.7525pt x 2889.79625pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+<images/Zw229-15_LC.jpg, id=499, 4751.7525pt x 2889.79625pt>
 File: images/Zw229-15_LC.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_LC.jpg>
 Package pdftex.def Info: images/Zw229-15_LC.jpg used on input line 340.
 (pdftex.def)             Requested size: 504.0pt x 306.50214pt.
 
-<images/Zw229-15_PSD.jpg, id=505, 4679.4825pt x 2818.53pt>
+<images/Zw229-15_PSD.jpg, id=504, 4679.4825pt x 2818.53pt>
 File: images/Zw229-15_PSD.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_PSD.jpg>
 Package pdftex.def Info: images/Zw229-15_PSD.jpg used on input line 348.
 (pdftex.def)             Requested size: 504.0pt x 303.54517pt.
-
-<images/Zw229-15_DampedHO.jpg, id=513, 4615.2425pt x 2818.53pt>
+ [7]
+<images/Zw229-15_DampedHO.jpg, id=537, 4615.2425pt x 2818.53pt>
 File: images/Zw229-15_DampedHO.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_DampedHO.jpg>
 Package pdftex.def Info: images/Zw229-15_DampedHO.jpg used on input line 358.
 (pdftex.def)             Requested size: 240.0pt x 146.5257pt.
 
-Underfull \vbox (badness 1024) has occurred while \output is active []
-
- [7]
-<images/Zw229-15_GF.jpg, id=541, 4715.6175pt x 2854.665pt>
+<images/Zw229-15_GF.jpg, id=540, 4715.6175pt x 2854.665pt>
 File: images/Zw229-15_GF.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_GF.jpg>
 Package pdftex.def Info: images/Zw229-15_GF.jpg used on input line 366.
 (pdftex.def)             Requested size: 504.0pt x 305.08461pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-<images/Zw229-15_distPSD.jpg, id=543, 4679.4825pt x 2818.53pt>
+<images/Zw229-15_distPSD.jpg, id=542, 4679.4825pt x 2818.53pt>
 File: images/Zw229-15_distPSD.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_distPSD.jpg>
 Package pdftex.def Info: images/Zw229-15_distPSD.jpg used on input line 374.
 (pdftex.def)             Requested size: 240.0pt x 144.54736pt.
-
-<images/Zw229-15_Times.jpg, id=549, 3452.9pt x 3545.245pt>
-File: images/Zw229-15_Times.jpg Graphic file (type jpg)
-
-<use images/Zw229-15_Times.jpg>
-Package pdftex.def Info: images/Zw229-15_Times.jpg used on input line 382.
-(pdftex.def)             Requested size: 504.0pt x 517.42838pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1051,9 +1041,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.385 \end{figure*}
-                    <./images/Zw229-15_LC.jpg>]
-<images/Zw229-15_mockLC.jpg, id=562, 4679.4825pt x 2817.52625pt>
+l.380 
+       <./images/Zw229-15_LC.jpg>]
+<images/Zw229-15_Times.jpg, id=557, 3452.9pt x 3545.245pt>
+File: images/Zw229-15_Times.jpg Graphic file (type jpg)
+
+<use images/Zw229-15_Times.jpg>
+Package pdftex.def Info: images/Zw229-15_Times.jpg used on input line 382.
+(pdftex.def)             Requested size: 504.0pt x 517.42838pt.
+
+<images/Zw229-15_mockLC.jpg, id=561, 4679.4825pt x 2817.52625pt>
 File: images/Zw229-15_mockLC.jpg Graphic file (type jpg)
 
 <use images/Zw229-15_mockLC.jpg>
@@ -1067,21 +1064,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.396 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-4}) has been already used, duplicate ignored
+l.393 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.396 
-       <./images/Zw229-15_PSD.jpg> <./images/Zw229-15_DampedHO.jpg>]
+l.393 \end{figure}
+                   <./images/Zw229-15_PSD.jpg> <./images/Zw229-15_DampedHO.jpg>
+]
 Underfull \hbox (badness 1072) in paragraph at lines 401--402
 \T1/aer/m/n/9 Instrument-induced ar-ti-facts were ex-pected in the \T1/aer/m/it
 /9 Ke-
  []
 
-[10pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
- has been already used, duplicate ignored
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.5}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1103,15 +1104,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.404 
+l.402 
        <./images/Zw229-15_Times.jpg>] [12pdfTeX warning (ext4): destination wit
 h the same identifier (name{figure.8}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.424 \begin{equation}
-                      \label{eq:tdyn} <./images/Zw229-15_mockLC.jpg>] [13]
+l.419 R
+       egardless of the mechanism for variability, certain time-scales of in...
+ <./images/Zw229-15_mockLC.jpg>] [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1119,7 +1121,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package hyperref Warning: Suppressing empty link on input line 444.
 
-[15]) [16] [17] [18]
+
+Underfull \vbox (badness 3428) has occurred while \output is active []
+
+ [15])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+[17] [18]
 
 Package hyperref Warning: Composite letter `\textasciimacron+a'
 (hyperref)                not defined in PD1 encoding,
@@ -1130,7 +1139,10 @@ Package hyperref Warning: Composite letter `\textasciimacron+i'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciimacron' on input line 703.
 
-[19] [20]
+[19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
 Underfull \hbox (badness 1092) in paragraph at lines 850--852
 \T1/aer/m/n/9 where $[][] \OMS/ntxsy/m/n/9 ^^X N\U/ntxmia/m/it/9 }[]\OML/ntxmi/
 m/it/9 ; []\U/ntxmia/m/it/9 ~$\T1/aer/m/n/9 . The orig-i-nal ob-ser-va-tion equ
@@ -1169,11 +1181,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1003.
 Here is how much of TeX's memory you used:
  9673 strings out of 493304
  135566 string characters out of 6139870
- 252516 words of memory out of 5000000
+ 249216 words of memory out of 5000000
  12508 multiletter control sequences out of 15000+600000
  173005 words of font info for 327 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,17n,35p,2884b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,17n,35p,2882b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1208,7 +1220,7 @@ texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Manuscript.pdf (24 pages, 8357111 bytes).
+Output written on Manuscript.pdf (24 pages, 8357392 bytes).
 PDF statistics:
  1427 PDF objects out of 1440 (max. 8388607)
  1341 compressed objects within 14 object streams
