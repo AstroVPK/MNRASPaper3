@@ -1,0 +1,34 @@
+The manuscript `Extracting information from AGN variability' builds on the CARMA modelling technique of Kelly et al. 2014 by proposing that the CARMA process is a direct result of the physics driving the variability. Thus, the actual CARMA equation is interpreted physically as the results of the dissipative forces at work in the accretion disc (Moving Average part) and distribution of flux perturbations (error term). For the solution of the CARMA equation the authors employ the Green's function in order to quantify the impulse response of the system. Despite the fact that this approach is indeed an important extension of the actual CARMA model of Kelly et al. 2014, I am not at all convinced that the actual physical properties of the underlying variability mechanism are mapped directly in the CARMA equation for a plethora of reasons that I am presenting below. Thus, I recommend major revision for the manuscript before it is reconsidered for publication. The authors should prove that the parameters of the CARMA model are indeed probing AGN physics, that the error term (Wiener process) is indeed the appropriate correlated noise process needed in AGN variability (from a variety of different other cases). If the authors do not prove these properties then the method can only be used to parametrically model, using their software KALI, a time series without providing any information about the underlying time series.
+
+If CARMA model was really describing the physics of the AGN variability properties then it should never yield fluxes that are negative. Thus, if the light curve shown in Fig.2 had instead of a mean value and a standard deviation of 6.3 and 0.57 (*10^-7 arbit.units), respectively, the following values e.g. 2.2 and 0.9 (*10^-7 arbit.units), respectively, then some of the simulated light curves (shown in figure 8) would have negative values. How can one be assured that the CARMA model will yield positive light curves using physical arguments embedded in the model?
+
+p4,l12,lc: The main motivation behind this paper is coming from the engineering literature i.e. Pandit & Wu 2001 (very well known book!) covering at the same time several other areas of science, business, and economics. Unfortunately, the whole paper is based on an institutional feeling, rather than a solid proof, that a CARMA model can be interpreted literally in astrophysical processes using dissipative forces and flux perturbations. Why is this the case? Why the authors select a CARMA process with a Wiener error term and not a CARMA process with a Ornstein–Uhlenbeck or a Cox–Ingersoll–Ross error term? I find very arbitrary the selection of such a process claiming to provide physical insight about AGN. In p4,rc,l.12 the authors write `Due to the non-linerity involved...correlated Gaussian noise process'. Correlated Gaussian noise process is also Ornstein–Uhlenbeck and why Gaussian in the first place? As the paper is not simply claiming only to `model of AGN time series' but instead extracting physical information from the model, all the component selections need to be physically backed up by arguments proving their validity.
+
+
+The CARMA model, as defined in the manuscript (eq 1), seems to have always the same autoregressive, p, moving average, q, order. Is this really the case i.e. p=q? The right hand side of equation 1, equation 4, equation C1 shouldn't be of order q? Moreover, in contrast to Kelly et al. 2014 the error term is not a white noise process with zero mean and variance σ^2 but instead it is a Wiener process. What are the parameters of Wiener process i.e. mean and standard deviation?
+
+
+
+The applicability of the CARMA model is another major problem of the paper. In Section 5 (second paragraph) the authors need to quantify fully, using actual statistical criteria, their statements about the suitability of a CARMA model.
+
+p6,l56,rc: A C-ARMA process may be unsuitable if the light curve exhibits non-stationary behaviour'
+What do the authors mean with non-stationarity? The term `non-stationary' is widely misused in astrophysics characterising trends and features that are usually selected by eye. The authors here should really state the criteria that the cumulative distribution function of the joint distribution of the observed data set should follow. Do they refer to the mean, to the variance, to the autocorrelation etc? Do they mean weak-sense stationarity, second order stationarity (Priestley, M. B. (1981), `Spectral Analysis and Time Series'). Most importantly, which criteria one uses to characterize such a process e.g. unit root tests??
+
+To give an example, consider a simple autoregressive process of order 2 with normal white noise variance σ^2: AR[{a1,a2},σ^2]. This process is weakly stationary when: a2^2<1 and (-a1-a1a2)(a1+a1a2)+(1-a2^2)^2>0.
+
+p6,l58,rc:`the appearance of the light curve changes dramatically at some point in the light curve' -> What does it mean dramatically? How much `dramatic' a change should be. Is `dramatic' a statistical measure of any time series property?
+
+p7,l5,lc:`the light curve has a marked trend'->What does this mean? How one quantifies such a behaviour?
+
+p7,l8,lc:`A CARMA analysis may also be unsuitable if the light curve has
+flares': What the authors define as flares? The paper of Edelson et al. 2013 shows indeed a light curve. What do the authors find problematic in their CARMA model application. How do they quantify it with a statistical criterion.
+
+p7,l10,lc: `A CARMA model is suitable if the sample autocorrelation and partial autocorrelation functions of the light curve exponentially decay to below the significance level for a pure white noise process'. The authors have to quantify this statement up to a certain significance level (e.g. 5%, 3%). The autocorrelation and partial autocorrelation function deal only with the covariance properties of the data sets. You can have uncorrelated data which are not independent (Priestley 1981).
+
+p10,l58,lc:`...will not resemble...' What do the authors mean resemble? Do they use eye-criteria?
+
+p10,l38,rc: `Visually' Unfortunately there is no such a think as visually.
+
+p10,l45,rc: (probably non-linear). Have the authors performed a non-linearity test (Keenan, BDS, additivity tests, Langrange multiplier tests etc.) Second order dependencies can be caused from non-Gaussianity within a linear process.
+
+It is well know that AGN variability exhibits the so called flux-rms relation Uttley et al. 2005, MNRAS, 359, 345. Does the CARMA model exhibits the same behaviour?
