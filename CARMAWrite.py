@@ -10,15 +10,15 @@ import pdb
 import sys as s
 import time
 
-goldenRatio=1.61803398875
-fhgt=10.0
-fwid=fhgt*goldenRatio
-largeFontSize=48
-normalFontSize=32
-smallFontSize=24
-footnoteFontSize=20
-scriptFontSize=16
-tinyFontSize=12
+goldenRatio = 1.61803398875
+fhgt = 10.0
+fwid = fhgt*goldenRatio
+largeFontSize = 48
+normalFontSize = 32
+smallFontSize = 24
+footnoteFontSize = 20
+scriptFontSize = 16
+tinyFontSize = 12
 
 keplerPath = "/home/vpk24/Documents/MNRASPaper3/Kepler/"
 outPath = "/home/vpk24/Documents/MNRASPaper3/Zw229-15Results/PLATINUM/"
@@ -35,11 +35,11 @@ dt = (((intTime+readTime)*numIntLC)/(1.0 + redShift))/secPerSiderealDay
 
 numSamples = 50000
 
-outputSample = open(outPath+'Sample.pkl','rb')
+outputSample = open(outPath+'Sample.pkl', 'rb')
 sample = cP.load(outputSample)
 outputSample.close()
 
-outputChain = open(outPath+'Chain.pkl','wb')
+outputChain = open(outPath+'Chain.pkl', 'wb')
 
 mu = sample.get_samples('mu')
 cP.dump(mu, outputChain)
