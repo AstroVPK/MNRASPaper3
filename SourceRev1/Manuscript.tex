@@ -237,7 +237,7 @@ In the next section we discuss a simple C-ARMA process---the C-ARMA($2$,$1$) pro
 \section[C-ARMA($2$,$1$)]{An Example of a C-ARMA Process: The C-ARMA($2$,$1$) Process}\label{sec:CARMA21}
 
 \begin{figure*}
-    \includegraphics[width=\textwidth]{Figure1.jpg}
+    \includegraphics[width=\textwidth]{Figure1.pdf}
     \caption{Why do AGN poorly-sampled AGN light curves look like a damped random walk (DRW)? We plot two PSD models - the DRW of \citet{Kelly09} in cyan and a damped harmonic oscillator (DHO) in orange. The DRW is a C-ARMA($1$,$0$) model i.e  the simplest possible C-ARMA model. The DHO is C-ARMA($2$,$q$) model, i.e., it is a $2^{\text{nd}}$-order C-ARMA model. The vertical dashes are located at the time-intervals probed by NASA's \textit{K2} mission (purple), the SDSS survey (red), and an idealized combination of the two (green). On timescales longer than $\sim 10$~d, both PSDs are identical, explaining why the simpler DRW model is popular for light curves that do not probe short timescales. The availability of better data in the future will necessitate more sophisticated C-ARMA models.}
     \label{fig:PowerOfSDSSK2}
 \end{figure*}
@@ -344,7 +344,7 @@ We apply the C-ARMA inferencing techniques described in sections~\ref{sec:Fittin
 \subsection[C-ARMA Model for Zw 229-15]{Determination of a C-ARMA Model for the Light Curve of Zw 229-15}\label{sec:Zw229-15CARMA}
 
 \begin{figure*}
-    \includegraphics[width=\textwidth]{Figure2.jpg}
+    \includegraphics[width=\textwidth]{Figure2.pdf}
     \caption{Light curve of the Seyfert 1 AGN Zw 229-15. This light curve is best fit by the C-ARMA($2$,$1$) process discussed in section~\ref{sec:CARMA21}.}
     \label{fig:Zw229-15_LC}
 \end{figure*}
@@ -352,7 +352,7 @@ We apply the C-ARMA inferencing techniques described in sections~\ref{sec:Fittin
 We use our package, \href{https://github.com/AstroVPK/kali}{\textsc{k\={a}l\={i}}} to fit the observed light curve of Zw 229-15 to C-ARMA($p$,$q$) processes with $1 \leq p \leq 10$ and $0 \leq q < p$. In addition to using our package \href{https://github.com/AstroVPK/kali}{\textsc{k\={a}l\={i}}}, we performed the same analysis using the \textsc{c++} and \textsc{Python} library \textsc{carma\_pack} of \citet{Kelly14}. While both codes produced similar numerical results, \href{https://github.com/AstroVPK/kali}{\textsc{k\={a}l\={i}}} runs about $50 \times$ faster due to our extensive usage of the high performance Intel Math Kernel Library (MKL). Prior to the analysis, the light curve of Zw 229-15 was corrected to the rest-frame of the galaxy at $z = 0.0275$ by scaling $\delta t$ by $1/(1+z)$. No binning of the light curve was performed. Instead of adopting the \Kepler error estimates, \textsc{carma\_pack} assumes that the variance of the observation noise may be inaccurate and sets $\sigma^{2}_{N,\mathrm{true}} = M_{\mathrm{Err}} \sigma^{2}_{N,\mathrm{stated}}$ for each observation. The multiplicative scaling factor $M_{\mathrm{Err}}$ is treated as a fit parameter, i.e., all purely white noise in the data is assumed to originate in process of observation rather than be intrinsic to the signal. We find that the median value of the multiplicative scaling factor is $M_{\mathrm{Err}} = 1.30$. The observation noise levels inferred from the pixel noise statistics of the \Kepler CCDs appear to underestimate the true observation noise level in the signal by $\sim 14$ percent at the $95$-percent confidence level.
 
 \begin{figure*}
-    \includegraphics[width=\textwidth]{Figure3.jpg}
+    \includegraphics[width=\textwidth]{Figure3.pdf}
     \caption{Power spectral density of the light curve of Zw 229-15. Using the \Kepler noise properties $\sigma^{2}_{N,\mathrm{stated}}$ and $M_{\mathrm{Err}}$, we compute the observation noise level (red line). The inferred PSD crosses the noise level at $t_{\mathrm{noise}} \sim 8.3$~h. On time-scales comparable to $t_{\mathrm{noise}}$, i.e., $< 1$~d, the noise level does not permit us to infer anything about the behaviour of this light curve. Compare this PSD to the DHO PSD in figure~\ref{fig:PowerOfSDSSK2}.}
     \label{fig:Zw229-15_PSD}
 \end{figure*}
@@ -362,7 +362,7 @@ Although we searched an extensive space of C-ARMA models ($1 \leq p \leq 10$ and
 \subsection[dHO Behavior of Zw 229-15]{The Damped Harmonic Oscillator-like Behavior of the Light Curve of Zw 229-15}\label{sec:DHO}
 
 \begin{figure}
-    \includegraphics[width=\columnwidth]{Figure4.jpg}
+    \includegraphics[width=\columnwidth]{Figure4.pdf}
     \caption{Damped Harmonic oscillator parametrization of the light curve of Zw 229-15. The time period of the oscillator is $T$ and the damping ratio is $\zeta$. The perturbations in the accretion disk of Zw 229-15 are over-damped as indicated by the mean value of $\zeta > 1$. This indicates that flux perturbations steadily decay to the mean flux level without oscillating.}
     \label{fig:Zw229-15_HO}
 \end{figure}
@@ -370,7 +370,7 @@ Although we searched an extensive space of C-ARMA models ($1 \leq p \leq 10$ and
 Since the Zw 229-15 light curve is well-described by a C-ARMA($2$,$1$) process, the differential equation governing the behavior of flux perturbations may be interpreted as the damped harmonic oscillator driven by a colored stochastic process as described in section~\ref{sec:CARMA21}. Figure~\ref{fig:Zw229-15_HO} shows the distribution of the un-damped-oscillator time period $T_{\mathrm{dHO}}$ against the damping ratio $\zeta_{\mathrm{dHO}}$. The damping ratio is very large with median value $3.30$ with $95$-percent CI [$2.78$,$3.85$] while the time period of the harmonic oscillator in the absence of damping is $59.9$~d with $95$-percent CI [$56.9$,$62.8$]~d. Physically this implies that flux perturbations slowly return to the steady-state flux level after reaching peak intensity rather than oscillating about the mean flux level. This observation supports the idea that flux perturbations may occur due to local Magneto Rotational Instability-generated hot- and cold-spots in the accretion disk that gradually disperse over time.
 
 \begin{figure*}
-    \includegraphics[width=\textwidth]{Figure5.jpg}
+    \includegraphics[width=\textwidth]{Figure5.pdf}
     \caption{The Green's function for the light curve of Zw 229-15 quantifies how a unit impulse flux perturbation evolves as a function of time. A tiny unit impulse perturbation at $t = 0$ causes the flux from the perturbation to peak at $t = t_{\mathrm{max}}$ ($\sim 5.65$~d). The flux perturbation then decays exponentially with $t_{\mathrm{e-fold}} \sim 68.7$~d, dropping to under $\sim 1$ percent the peak intensity $\sim 320$~d later.}
     \label{fig:Zw229-15_GFunc}
 \end{figure*}
@@ -378,7 +378,7 @@ Since the Zw 229-15 light curve is well-described by a C-ARMA($2$,$1$) process, 
 The corresponding Green's function is shown in figure~\ref{fig:Zw229-15_GFunc} along with the $95$ percent CI. Recall that the Green's function quantifies the evolution of a `unit-impulse'. In this case, the impulses consist of perturbations of the flux away from the steady-state level. The effect of an impulse is to drive the flux away from the mean-level until the rate at which the flux is changing drops to zero. This occurs $t_{\mathrm{max}} = 5.65$~d with $95$-percent CI [$5.50$,$5.80$]~d after the original impulse (orange dashed line). On the left hand side of the figure, we see that on short time-scales (red-shaded region) the observation noise makes it impossible to observe structure in the Green's function. However, the $t_{\mathrm{max}} \sim 5.6$~d time-scale that we detect here is safely above $t_{\mathrm{noise}} \sim 8.3$~h and is therefore unlikely to be an artifact of the instrumentation-noise. Due to the very large damping ratio, flux perturbations do not dissipate rapidly---perturbations drop in intensity from the peak by a factor of $\mathrm{e}$ by $t_{\mathrm{e-fold}} = 68.7$~d with $95$-percent CI [$62.38$,$75.08$]~d. On longer time-scales, the correlation between the total integrated flux from the accretion disk and the original perturbation will decrease as the flux becomes dominated by the increasingly larger numbers of intervening perturbations. It is plausible that conventional approaches such as PSD-fitting and structure function analysis detect the $t_{\mathrm{e-fold}}$ time-scale as the de-correlation time-scale.
 
 \begin{figure}
-    \includegraphics[width=\columnwidth]{Figure6.jpg}
+    \includegraphics[width=\columnwidth]{Figure6.pdf}
     \caption{PSD of the flux perturbation impulses in the accretion disk of Zw 229-15. The PSD begins to steepen at $t = t_{\mathrm{turn}} (\sim 1)$~d i.e on time-scales longer than $\sim 1$~d, the log PSD has no slope implying that the flux perturbation impulses behave like white noise. On shorter time-scales, the log PSD increases linearly with slope $2$.}
     \label{fig:Zw229-15_distPSD}
 \end{figure}
@@ -386,7 +386,7 @@ The corresponding Green's function is shown in figure~\ref{fig:Zw229-15_GFunc} a
 Figure~\ref{fig:Zw229-15_distPSD} shows the PSD of the disturbance properties inferred from the estimates of $\beta_{1}$ and $\beta_{2}$, i.e., the powerspectrum of the impulses that drive the flux perturbations. On very long time-scales, the disturbance have equal power over $\sim 3.5$ decades of frequency. On time-scales of $\sim 1$~d, the disturbance PSD begins to rise with log-slope $2$. Impulses with such PSD resemble `violet noise'. Such PSD are produced by the thermal noise of the medium \citep{Mellen52} suggesting that on these very short time-scales, we may be probing the accretion disk matter directly. It may also be the case that we are detecting very low wavenumber, large lengthscale eddies in the turbulent flow \citep{EddySim15}. Unfortunately, the proximity of the inferred turnover time-scale $t_{\mathrm{turn}} = 1.081$~d with $95$-percent CI [$1.05$,$1.11$]~d to the noise-dominated time-scale $t_{\mathrm{noise}} \sim 8.3$~h makes it difficult to draw conclusions about the disturbance PSD behaviour on these time-scales.
 
 \begin{figure*}
-    \includegraphics[width=\textwidth]{Figure7.jpg}
+    \includegraphics[width=\textwidth]{Figure7.pdf}
     \caption{Scatter plots of $t_{\mathrm{max}}$ v/s $t_{\mathrm{e-fold}}$ v/s $t_{\mathrm{turn}}$ in units of d. The diagonal shows histograms of the estimates of these time-scales. The time taken to achieve peak output flux, $t_{\mathrm{max}}$, is anti-correlated with the e-folding time of the flux perturbation $t_{\mathrm{e-fold}}$ but correlated with $t_{\mathrm{turn}}$.}
     \label{fig:Zw229-15_times}
 \end{figure*}

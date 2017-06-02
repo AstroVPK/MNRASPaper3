@@ -18,6 +18,10 @@ import pdb
 import sys as s
 import time
 
+import triangle
+import mpl_settings
+
+mpl_settings.set_plot_params(useTex=True)
 goldenRatio = 1.61803398875
 fhgt = 10.0
 fwid = fhgt*goldenRatio
@@ -60,7 +64,7 @@ makeFig2 = False
 legendFig2GFunc = True
 numTimes = 2500
 
-makeFig3 = True
+makeFig3 = False
 
 makeFig4 = False
 legendFig4distPSD = True
@@ -80,6 +84,10 @@ nBinsFig7 = 50
 makeFig8 = False
 
 makeFig9 = False
+
+makeFig10 = False
+
+makeFig11 = True
 
 
 def eval_greens_func(tVal, ar_root0, ar_root1):
@@ -246,7 +254,7 @@ timeFig4CFinish = time.time()
 print "Fig4 Calculations: %f (sec) i.e. %f (min)"%((timeFig4CFinish-timeFig4CStart), (timeFig4CFinish-timeFig4CStart)/60.0)
 
 timeFig5CStart = time.time()
-if ((makeFig5 is True) or (makeFig2 is True) or (makeAllFigs is True)):
+if ((makeFig11 is True) or (makeFig10 is True) or (makeFig5 is True) or (makeFig2 is True) or (makeAllFigs is True)):
     nfoldings = 1
     t_maxes = get_t_max(ar_roots, nsamples=numSamples/sampleFactor)
     gfunc_maxes = np.zeros(t_maxes.shape[0])
@@ -270,7 +278,7 @@ timeFig5CFinish = time.time()
 print "Fig5 Calculations: %f (sec) i.e. %f (min)"%((timeFig5CFinish-timeFig5CStart), (timeFig5CFinish-timeFig5CStart)/60.0)
 
 timeFig6CStart = time.time()
-if ((makeFig6 is True) or (makeFig4 is True) or (makeAllFigs is True)):
+if ((makeFig11 is True) or (makeFig6 is True) or (makeFig4 is True) or (makeAllFigs is True)):
     t_turns = 2.0*m.pi*poly_coefs[:, 1]/poly_coefs[:, 0]
 timeFig6CFinish = time.time()
 print "Fig6 Calculations: %f (sec) i.e. %f (min)"%((timeFig6CFinish-timeFig6CStart), (timeFig6CFinish-timeFig6CStart)/60.0)
@@ -295,6 +303,16 @@ if ((makeFig8 is True) or ((makeFig1 is True) and (plotMockLC is True)) or (make
     y_sim = y_sim_no_noise + np.random.normal(0.0, yerr_sim, t.shape[0])
 timeFig8CFinish = time.time()
 print "Fig8 Calculations: %f (sec) i.e. %f (min)"%((timeFig8CFinish-timeFig8CStart), (timeFig8CFinish-timeFig8CStart)/60.0)
+
+timeFig11CStart = time.time()
+if (makeFig11 is True):
+    timesArr = np.zeros((numSamples, 3))
+    for i in xrange(numSamples):
+        timesArr[i, 0] = t_maxes[i].real
+        timesArr[i, 1] = tau_solution[i]
+        timesArr[i, 2] = t_turns[i].real
+timeFig11CFinish = time.time()
+print "Fig11 Calculations: %f (sec) i.e. %f (min)"%((timeFig11CFinish-timeFig11CStart), (timeFig11CFinish-timeFig11CStart)/60.0)
 
 ##########################################################################
 ##########################################################################
@@ -618,13 +636,13 @@ if ((makeFig3 is True) or (makeAllFigs is True)):
         0.7, 0.15), xycoords='axes fraction', textcoords='axes fraction', ha='center', va='center', multialignment='center', fontsize=24)
 
     plt.tight_layout()
-    figure3JPG = os.path.join(outPath, 'Zw229-15_DampedHO.jpg')
+    figure3JPG = os.path.join(outPath, 'Zw229-15_ARCoeffs.jpg')
     plt.savefig(figure3JPG, dpi=300)
     if (makePDF is True):
-        figure3PDF = os.path.join(outPath, 'Zw229-15_DampedHO.pdf')
+        figure3PDF = os.path.join(outPath, 'Zw229-15_ARCoeffs.pdf')
         plt.savefig(figure3PDF, dpi=300)
     if (makeEPS is True):
-        figure3EPS = os.path.join(outPath, 'Zw229-15_DampedHO.eps')
+        figure3EPS = os.path.join(outPath, 'Zw229-15_ARCoeffs.eps')
         plt.savefig(figure3EPS, dpi=300)
 timeFig3PFinish = time.time()
 print "Fig3 Plots: %f (sec) i.e. %f (min)"%((timeFig3PFinish-timeFig3PStart), (timeFig3PFinish-timeFig3PStart)/60.0)
@@ -817,61 +835,6 @@ if ((makeFig5 is True) or (makeAllFigs is True)):
     if (makeEPS is True):
         figure5EPS = os.path.join(outPath, 'Zw229-15_tmax.eps')
         plt.savefig(figure5EPS, dpi=300)
-
-    '''
-    fig9 = plt.figure(10,figsize=(fwid,fhgt))
-	numRows=1000
-	numCols=numRows
-	gs1 = gridspec.GridSpec(numRows, numCols)
-
-	ax1 = fig9.add_subplot(gs1[:,:])
-	scatPlot = ax1.scatter(t_maxes[:].real,tau_solution[:],c=best_loglike-loglike,marker='.',cmap=colormap.gist_rainbow_r,linewidth = 0)
-
-	ax1.set_xlim(5.0,6.3)
-	numXTicks=3
-	xTicks=np.zeros(numXTicks)
-	for i in xrange(numXTicks):
-		xTicks[i]=0.4*i+5.2
-	ax1.set_xticks(xTicks)
-	xLabels = [item.get_text() for item in ax1.get_xticklabels()]
-	for i in xrange(numXTicks):
-		xLabels[i]=r'${\scriptscriptstyle %2.1f}$'%(xTicks[i])
-	ax1.set_xticklabels(xLabels)
-	ax1.set_xlabel(r'$t_{\mathrm{max}}$~{\large (d)}')
-
-	ax1.set_ylim(40.0,100.0)
-	numYTicks=3
-	yTicks=np.zeros(numYTicks)
-	for i in xrange(numYTicks):
-		yTicks[i]=20*i+50
-	ax1.set_yticks(yTicks)
-	yLabels = [item.get_text() for item in ax1.get_yticklabels()]
-	for i in xrange(numYTicks):
-		yLabels[i]=r'${\scriptscriptstyle %3.2f}$'%(yTicks[i])
-	ax1.set_yticklabels(yLabels)
-	ax1.set_ylabel(r'$t_{\mathrm{e-fold}}$~{\large (d)}')
-
-	numCBarTicks=5
-	cBarTicks=np.zeros(numCBarTicks)
-	for i in xrange(numCBarTicks):
-		cBarTicks[i]=-3.0*i-1.5
-	cBar = plt.colorbar(scatPlot, ax=ax1, orientation='vertical',ticks=cBarTicks,format=r'$\scriptstyle %2.1f$')
-	cBar.set_label(r'Relative Likelihood',fontsize=footnoteFontSize)
-
-	ax1.annotate(r'$t_{\mathrm{max}} = %3.1f^{+%2.1f}_{-%2.1f}$ (d)'%(t_max_med,t_max_high-t_max_med,t_max_med-t_max_low),xy=(0.31,0.25),xycoords='axes fraction',textcoords='axes fraction',ha='center',va='center',multialignment='center',fontsize=24)
-	ax1.annotate(r'$t_{\mathrm{e-fold}} = %3.2f^{+%3.2f}_{-%3.2f}$'%(tau_solution_med,tau_solution_high-tau_solution_med,tau_solution_med-tau_solution_low),xy=(0.3,0.15),xycoords='axes fraction',textcoords='axes fraction',ha='center',va='center',multialignment='center',fontsize=24)
-
-	plt.tight_layout()
-	figure9JPG=outPath+'Zw229-15_tmax_tefold.jpg'
-	plt.savefig(figure9JPG,dpi=300)
-	if (makePDF==True):
-		figure9PDF=outPath+'Zw229-15_tmax_tefold.pdf'
-		plt.savefig(figure9PDF,dpi=300)
-	if (makeEPS==True):
-		figure9EPS=outPath+'Zw229-15_tmax_tefold.eps'
-		plt.savefig(figure9EPS,dpi=300)
-        '''
-
 timeFig5PFinish = time.time()
 print "Fig5 Plots: %f (sec) i.e. %f (min)"%((timeFig5PFinish-timeFig5PStart), (timeFig5PFinish-timeFig5PStart)/60.0)
 
@@ -1059,7 +1022,7 @@ if ((makeFig9 is True) or (makeAllFigs is True)):
     numCols = numRows
     gs1 = gridspec.GridSpec(numRows, numCols)
 
-    ax1 = fig3.add_subplot(gs1[:, :])
+    ax1 = fig9.add_subplot(gs1[:, :])
     scatPlot = ax1.scatter(tscale, zeta, c=best_loglike-loglike, marker='.',
                            cmap=colormap.gist_rainbow_r, linewidth=0)
 
@@ -1101,15 +1064,102 @@ if ((makeFig9 is True) or (makeAllFigs is True)):
         0.7, 0.15), xycoords='axes fraction', textcoords='axes fraction', ha='center', va='center', multialignment='center', fontsize=24)
 
     plt.tight_layout()
-    figure3JPG = os.path.join(outPath, 'Zw229-15_DampedHO.jpg')
-    plt.savefig(figure3JPG, dpi=300)
+    figure9JPG = os.path.join(outPath, 'Zw229-15_DampedHO.jpg')
+    plt.savefig(figure9JPG, dpi=300)
     if (makePDF is True):
-        figure3PDF = os.path.join(outPath, 'Zw229-15_DampedHO.pdf')
-        plt.savefig(figure3PDF, dpi=300)
+        figure9PDF = os.path.join(outPath, 'Zw229-15_DampedHO.pdf')
+        plt.savefig(figure9PDF, dpi=300)
     if (makeEPS is True):
-        figure3EPS = os.path.join(outPath, 'Zw229-15_DampedHO.eps')
-        plt.savefig(figure3EPS, dpi=300)
+        figure9EPS = os.path.join(outPath, 'Zw229-15_DampedHO.eps')
+        plt.savefig(figure9EPS, dpi=300)
 timeFig9PFinish = time.time()
 print "Fig9 Plots: %f (sec) i.e. %f (min)"%((timeFig9PFinish-timeFig9PStart), (timeFig9PFinish-timeFig9PStart)/60.0)
 
 # End Figure 9 #
+
+# Figure 10 #
+
+timeFig10PStart = time.time()
+if ((makeFig10 is True) or (makeAllFigs is True)):
+    fig10 = plt.figure(11, figsize=(fwid, fhgt))
+    numRows = 1000
+    numCols = numRows
+    gs1 = gridspec.GridSpec(numRows, numCols)
+
+    ax1 = fig10.add_subplot(gs1[:, :])
+    scatPlot = ax1.scatter(t_maxes[:].real, tau_solution[:], c=best_loglike -
+                           loglike, marker='.', cmap=colormap.gist_rainbow_r, linewidth=0)
+
+    ax1.set_xlim(5.0, 6.3)
+    numXTicks = 3
+    xTicks = np.zeros(numXTicks)
+    for i in xrange(numXTicks):
+        xTicks[i] = 0.4*i+5.2
+    ax1.set_xticks(xTicks)
+    xLabels = [item.get_text() for item in ax1.get_xticklabels()]
+    for i in xrange(numXTicks):
+        xLabels[i] = r'${\scriptscriptstyle %2.1f}$'%(xTicks[i])
+    ax1.set_xticklabels(xLabels)
+    ax1.set_xlabel(r'$t_{\mathrm{max}}$~{\large (d)}')
+
+    ax1.set_ylim(40.0, 100.0)
+    numYTicks = 3
+    yTicks = np.zeros(numYTicks)
+    for i in xrange(numYTicks):
+        yTicks[i] = 20*i+50
+    ax1.set_yticks(yTicks)
+    yLabels = [item.get_text() for item in ax1.get_yticklabels()]
+    for i in xrange(numYTicks):
+        yLabels[i] = r'${\scriptscriptstyle %3.2f}$'%(yTicks[i])
+    ax1.set_yticklabels(yLabels)
+    ax1.set_ylabel(r'$t_{\mathrm{e-fold}}$~{\large (d)}')
+
+    numCBarTicks = 5
+    cBarTicks = np.zeros(numCBarTicks)
+    for i in xrange(numCBarTicks):
+        cBarTicks[i] = -3.0*i-1.5
+    cBar = plt.colorbar(scatPlot, ax=ax1, orientation='vertical',
+                        ticks=cBarTicks, format=r'$\scriptstyle %2.1f$')
+    cBar.set_label(r'Relative Likelihood', fontsize=footnoteFontSize)
+
+    ax1.annotate(r'$t_{\mathrm{max}} = %3.1f^{+%2.1f}_{-%2.1f}$ (d)'%(t_max_med, t_max_high-t_max_med, t_max_med-t_max_low), xy=(
+        0.31, 0.25), xycoords='axes fraction', textcoords='axes fraction', ha='center', va='center', multialignment='center', fontsize=24)
+    ax1.annotate(r'$t_{\mathrm{e-fold}} = %3.2f^{+%3.2f}_{-%3.2f}$'%(tau_solution_med, tau_solution_high-tau_solution_med, tau_solution_med-tau_solution_low),
+                 xy=(0.3, 0.15), xycoords='axes fraction', textcoords='axes fraction', ha='center', va='center', multialignment='center', fontsize=24)
+
+    plt.tight_layout()
+    figure10JPG = os.path.join(outPath, 'Zw229-15_tmax_tefold.jpg')
+    plt.savefig(figure10JPG, dpi=300)
+    if (makePDF is True):
+        figure10PDF = os.path.join(outPath, 'Zw229-15_tmax_tefold.pdf')
+        plt.savefig(figure10PDF, dpi=300)
+    if (makeEPS is True):
+        figure10EPS = os.path.join(outPath, 'Zw229-15_tmax_tefold.eps')
+        plt.savefig(figure10EPS, dpi=300)
+timeFig10PFinish = time.time()
+print "Fig10 Plots: %f (sec) i.e. %f (min)"%((timeFig10PFinish-timeFig10PStart), (timeFig10PFinish-timeFig10PStart)/60.0)
+
+# End Figure 10 #
+
+# Figure 11 #
+
+timeFig11PStart = time.time()
+if ((makeFig11 is True) or (makeAllFigs is True)):
+    labelList = [r'$t_{\mathrm{max}}$', r'$t_{\mathrm{e-fold}}$', r'$t_{\mathrm{turn}}$']
+    figTitle = r'$t$'
+    fig11, quantiles, qvalues = triangle.corner(timesArr, labels=labelList, fig_size=10.0, show_titles=True,
+                                                title_args={'fontsize': 18}, quantiles=[0.16, 0.5, 0.84],
+                                                verbose=False, plot_contours=True, plot_datapoints=False,
+                                                plot_contour_lines=False, pcolor_cmap=colormap.gist_earth)
+    figure11JPG = os.path.join(outPath, 'Zw229-15_triangle.jpg')
+    plt.savefig(figure11JPG, dpi=300)
+    if (makePDF is True):
+        figure11PDF = os.path.join(outPath, 'Zw229-15_triangle.pdf')
+        plt.savefig(figure11PDF, dpi=300)
+    if (makeEPS is True):
+        figure11EPS = os.path.join(outPath, 'Zw229-15_triangle.eps')
+        plt.savefig(figure11EPS, dpi=300)
+timeFig11PFinish = time.time()
+print "Fig11 Plots: %f (sec) i.e. %f (min)"%((timeFig11PFinish-timeFig11PStart), (timeFig11PFinish-timeFig11PStart)/60.0)
+
+# End Figure 11 #
